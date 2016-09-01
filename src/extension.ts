@@ -1,19 +1,26 @@
 'use strict';
 
 import * as path from 'path';
-
+import { spawn } from 'child_process';
 import { ExtensionContext } from 'vscode';
-import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient';
+import { LanguageClient, LanguageClientOptions } from 'vscode-languageclient';
 
 export function activate(context: ExtensionContext) {
 
     // The server is implemented in PHP
     const serverPath = context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php'));
 
-    const serverOptions: ServerOptions = {
-        command: 'php',
-        args: [serverPath]
+    const serverOptions = () => {
+        const childProcess = spawn('php', [serverPath]);
+        childProcess.stderr.on('data', (chunk: Buffer) => {
+            console.error(chunk + '');
+        });
+        childProcess.stdout.on('data', (chunk: Buffer) => {
+            console.log(chunk + '');
+        });
+        return Promise.resolve(childProcess);
     };
+
 
     // Options to control the language client
     let clientOptions: LanguageClientOptions = {
