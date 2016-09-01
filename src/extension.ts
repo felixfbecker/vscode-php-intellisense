@@ -21,7 +21,6 @@ export function activate(context: ExtensionContext) {
         return Promise.resolve(childProcess);
     };
 
-
     // Options to control the language client
     let clientOptions: LanguageClientOptions = {
         // Register the server for php documents
