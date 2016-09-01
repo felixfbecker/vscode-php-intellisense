@@ -24,7 +24,7 @@ Clone whole repository and in root directory execute:
 ```bash
 composer install 
 npm install
-tsc
+npm run compile
 ```
 To install it in VS Code copy extension directory to **.vscode/extensions**.
 
