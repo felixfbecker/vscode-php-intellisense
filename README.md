@@ -9,7 +9,9 @@ In opposite to the included PHP IntelliSense and other PHP extensions, this uses
 instead of relying on naive regular expression parsing.
 
 ## Features
- - Find all symbols
+
+### Find all symbols
+![Find all symbols demo](images/documentSymbol.gif)
 
 ## Todo
  - Autocompletion
