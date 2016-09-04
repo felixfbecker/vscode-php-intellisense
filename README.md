@@ -13,15 +13,25 @@ instead of relying on naive regular expression parsing.
 ### Find all symbols
 ![Find all symbols demo](images/documentSymbol.gif)
 
+### Column-accurate error reporting
+![Error reporting demo](images/publishDiagnostics.png)
+
+
 ## Todo
  - Autocompletion
  - Rename
  - Goto definition
  - Format document
  - Hover
+ - Signature help
  - Follow composer autoloading
 
-## Build and Run From Source
+
+## Contributing
+
+This is just the VS Code extension that spawns the actual language server. The language server itself is implemented purely in PHP [in its own repository](https://github.com/felixfbecker/php-language-server), all features need to be implemented there and all issues should be reported there.
+
+### Build and Run From Source
 Clone whole repository and in root directory execute:
 ```bash
 composer install 
@@ -31,7 +41,3 @@ code .
 ```
 The last command will open the folder in VS Code. Hit `F5` to launch an Extension Development Host with the extension.
 For working on the language server, the easiest way is to replace the language server installation from composer in `vendor/felixfbecker/language-server` with a symlink to your local clone.
-
-## Contributing
-
-This is just the VS Code extension that spawns the actual language server. The language server itself is implemented purely in PHP [in its own repository](https://github.com/felixfbecker/php-language-server).
