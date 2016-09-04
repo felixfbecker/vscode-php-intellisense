@@ -11,9 +11,28 @@
   "engines": {
     "vscode": "^1.4.0"
   },
+  "keywords": [
+    "php",
+    "intellisense",
+    "autocompletion",
+    "help",
+    "refactor"
+  ],
   "categories": [
     "Languages"
   ],
+  "icon": "images/logo.svg",
+  "galleryBanner": {
+    "color": "#6682BA",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felixfbecker/vscode-php-intellisense.git"
+  },
+  "bugs": {
+    "url": "https://github.com/felixfbecker/php-language-server/issues"
+  },
   "activationEvents": [
     "onLanguage:php"
   ],
