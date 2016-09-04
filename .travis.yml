@@ -2,7 +2,6 @@ language: php
 
 php:
  - '7.0'
- - '5.10.0'
 
 before_install:
  - nvm install 5.10.0
