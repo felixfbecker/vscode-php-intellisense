@@ -1,12 +1,21 @@
-language: node_js
+language: php
 
-node_js:
+php:
+ - '7.0'
  - '5.10.0'
+
+before_install:
+ - nvm install 5.10.0
+ - nvm use 5.10.0
 
 install:
  - npm install
+ - composer install
 
 script:
  - npm run lint
  - npm run compile
 
+after_success:
+ # If the build was triggered by a tag, publish the new version
+ - 'if [[ $TRAVIS_TAG == v* ]]; then vsce publish -p $VSCE_TOKEN; fi'
