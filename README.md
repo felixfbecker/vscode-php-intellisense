@@ -27,10 +27,9 @@ Clone whole repository and in root directory execute:
 composer install 
 npm install
 npm run compile
+code .
 ```
-To install it in VS Code copy extension directory to **.vscode/extensions**.
-
-[Install extension in VS Code](https://code.visualstudio.com/docs/extensions/install-extension)
+The last command will open the folder in VS Code. Hit `F5` to launch an Extension Development Host with the extension.
 
 ## Contributing
 
