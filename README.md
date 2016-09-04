@@ -30,6 +30,7 @@ npm run compile
 code .
 ```
 The last command will open the folder in VS Code. Hit `F5` to launch an Extension Development Host with the extension.
+For working on the language server, the easiest way is to replace the language server installation from composer in `vendor/felixfbecker/language-server` with a symlink to your local clone.
 
 ## Contributing
 
