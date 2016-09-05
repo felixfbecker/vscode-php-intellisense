@@ -8,6 +8,9 @@ Advanced PHP IntelliSense for Visual Studio Code.
 In opposite to the included PHP IntelliSense and other PHP extensions, this uses an AST to parse the source code
 instead of relying on naive regular expression parsing.
 
+
+**Note: This is just the VS Code extension that spawns the actual language server. The language server itself is implemented purely in PHP [in its own repository](https://github.com/felixfbecker/php-language-server), all features need to be implemented there and all issues should be reported there.**
+
 ## Features
 
 ### Find all symbols
@@ -29,9 +32,6 @@ instead of relying on naive regular expression parsing.
 
 ## Contributing
 
-This is just the VS Code extension that spawns the actual language server. The language server itself is implemented purely in PHP [in its own repository](https://github.com/felixfbecker/php-language-server), all features need to be implemented there and all issues should be reported there.
-
-### Build and Run From Source
 Clone whole repository and in root directory execute:
 ```bash
 composer install 
@@ -41,3 +41,5 @@ code .
 ```
 The last command will open the folder in VS Code. Hit `F5` to launch an Extension Development Host with the extension.
 For working on the language server, the easiest way is to replace the language server installation from composer in `vendor/felixfbecker/language-server` with a symlink to your local clone.
+
+**For guidance on how to work on the language server, please see the [language server repository](https://github.com/felixfbecker/php-language-server).**
