@@ -41,3 +41,23 @@ code .
 ```
 The last command will open the folder in VS Code. Hit `F5` to launch an Extension Development Host with the extension.
 For working on the language server, the easiest way is to replace the language server installation from composer in `vendor/felixfbecker/language-server` with a symlink to your local clone.
+
+## Debug
+XDebug needs to be configured for remote debugging. Check if *ini* file contains necessary parameters:
+```
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+xdebug.remote_connect_back = 1
+xdebug.remote_port = 9000
+xdebug.remote_handler=dbgp
+xdebug.remote_host=localhost
+```
+### Configure VS Code
+TODO
+
+### Configure PDT
+Download Eclipse package with PHP support ([PHP EPP](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neonr))
+
+* Start PDT
+* Import extension project with File -> Open Project from File System
+* Set breakpoint in PHP language server source code
