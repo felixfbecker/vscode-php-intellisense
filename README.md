@@ -19,12 +19,14 @@ instead of relying on naive regular expression parsing.
 ### Column-accurate error reporting
 ![Error reporting demo](images/publishDiagnostics.png)
 
+### Format code
+![Format code demo](images/formatDocument.gif)
+
 
 ## Todo
  - Autocompletion
  - Rename
  - Goto definition
- - Format document
  - Hover
  - Signature help
  - Follow composer autoloading
