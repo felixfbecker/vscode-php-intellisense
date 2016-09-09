@@ -9,6 +9,7 @@ before_install:
 
 install:
  - npm install
+ - typings install
  - composer install
 
 script:
