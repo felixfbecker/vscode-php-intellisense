@@ -51,6 +51,6 @@
   },
   "dependencies": {
     "semver": "^5.3.0",
-    "vscode-languageclient": "^2.4.2-next.13"
+    "vscode-languageclient": "^2.4.2-next.24"
   }
 }
