@@ -21,7 +21,8 @@ export function activate(context: vscode.ExtensionContext) {
             return;
         }
 
-        let version = stdout.toString().match(/^PHP ([^\s]+)/)[1];
+        // Parse version and discard OS info like 7.0.8--0ubuntu0.16.04.2
+        let version = stdout.toString().match(/^PHP ([^\s]+)/)[1].split('-')[0];
         // Convert PHP prerelease format like 7.0.0rc1 to 7.0.0-rc1
         if (!/^\d+.\d+.\d+$/.test(version)) {
             version = version.replace(/(\d+.\d+.\d+)/, '$1-');
