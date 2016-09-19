@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
         if (!/^\d+.\d+.\d+$/.test(version)) {
             version = version.replace(/(\d+.\d+.\d+)/, '$1-');
         }
-        if (!semver.satisfies(version, '^7.0.0')) {
+        if (semver.lt(version, '7.0.0')) {
             vscode.window.showErrorMessage('The language server needs at least PHP 7 installed and in your PATH. Version found: ' + version);
             return;
         }
