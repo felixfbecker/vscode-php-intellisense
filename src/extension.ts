@@ -60,7 +60,7 @@ export function activate(context: vscode.ExtensionContext) {
                 // Listen on random port
                 server.listen(0, '127.0.0.1', () => {
                     const address = '127.0.0.1:' + server.address().port;
-                    spawnServer('--args', address);
+                    spawnServer('--tcp', address);
                 });
             } else {
                 // Use STDIO on Linux / Mac
