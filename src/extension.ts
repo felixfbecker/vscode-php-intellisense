@@ -5,6 +5,7 @@ import { spawn, execFile, ChildProcess } from 'child_process';
 import * as vscode from 'vscode';
 import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient';
 import * as semver from 'semver';
+import * as net from 'net';
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -32,18 +33,40 @@ export function activate(context: vscode.ExtensionContext) {
             return;
         }
 
-        const serverOptions = (): Promise<ChildProcess | StreamInfo> => {
-            // The server is implemented in PHP
-            const serverPath = context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php'));
-            const childProcess = spawn('php', [serverPath]);
-            childProcess.stderr.on('data', (chunk: Buffer) => {
-                console.error(chunk + '');
-            });
-            childProcess.stdout.on('data', (chunk: Buffer) => {
-                console.log(chunk + '');
-            });
-            return Promise.resolve(childProcess);
-        };
+        const serverOptions = () => new Promise<ChildProcess | StreamInfo>((resolve, reject) => {
+            function spawnServer(...args: string[]): ChildProcess {
+                // The server is implemented in PHP
+                const serverPath = context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php'));
+                const childProcess = spawn('php', [serverPath, ...args]);
+                childProcess.stderr.on('data', (chunk: Buffer) => {
+                    console.error(chunk + '');
+                });
+                childProcess.stdout.on('data', (chunk: Buffer) => {
+                    console.log(chunk + '');
+                });
+                return childProcess;
+            }
+            if (process.platform === 'win32') {
+                // Use a TCP socket on Windows because of blocking STDIO
+                const server = net.createServer(socket => {
+                    // 'connection' listener
+                    console.log('PHP process connected');
+                    socket.on('end', () => {
+                        console.log('PHP process disconnected');
+                    });
+                    server.close();
+                    resolve({ reader: socket, writer: socket });
+                });
+                // Listen on random port
+                server.listen(0, '127.0.0.1', () => {
+                    const address = '127.0.0.1:' + server.address().port;
+                    spawnServer('--args', address);
+                });
+            } else {
+                // Use STDIO on Linux / Mac
+                resolve(spawnServer());
+            }
+        });
 
         // Options to control the language client
         let clientOptions: LanguageClientOptions = {
