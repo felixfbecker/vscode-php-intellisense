@@ -24,6 +24,8 @@ You need at least PHP 7 installed and in your PATH for the extension to work.
 ### Format code
 ![Format code demo](images/formatDocument.gif)
 
+### Workspace symbol search
+![Workspace symbol search demo](images/workspaceSymbol.gif)
 
 ## Todo
  - Autocompletion
