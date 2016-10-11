@@ -74,8 +74,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
             });
             // Listen on random port
             server.listen(0, '127.0.0.1', () => {
-                const address = '127.0.0.1:' + server.address().port;
-                spawnServer('--tcp', address);
+                spawnServer('--tcp=127.0.0.1:' + server.address().port);
             });
         } else {
             // Use STDIO on Linux / Mac
