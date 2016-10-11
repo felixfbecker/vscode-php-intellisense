@@ -41,8 +41,8 @@ export function activate(context: vscode.ExtensionContext) {
         const serverOptions = () => new Promise<ChildProcess | StreamInfo>((resolve, reject) => {
             function spawnServer(...args: string[]): ChildProcess {
                 // The server is implemented in PHP
-                const serverPath = context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php'));
-                const childProcess = spawn('php', [serverPath, ...args]);
+                args.unshift(context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php')));
+                const childProcess = spawn('php', args);
                 childProcess.stderr.on('data', (chunk: Buffer) => {
                     console.error(chunk + '');
                 });

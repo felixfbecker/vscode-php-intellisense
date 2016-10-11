@@ -1,15 +1,19 @@
 {
 	"compilerOptions": {
-		"target": "ES5",
+		"target": "ES6",
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"outDir": "out",
 		"noLib": true,
     "noImplicitAny": true,
 		"sourceMap": true,
-    "rootDir": "src"
+    "rootDir": "src",
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true
 	},
 	"exclude": [
-		"node_modules"
+		"node_modules",
+    "out"
 	]
 }
