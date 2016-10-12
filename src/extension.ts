@@ -9,9 +9,11 @@ import * as net from 'net';
 
 export function activate(context: vscode.ExtensionContext) {
 
-    // Check if PHP is available and version is ^7.0.0
-    execFile('php', ['--version'], (err: NodeJS.ErrnoException, stdout: Buffer, stderr: Buffer) => {
+    const conf = vscode.workspace.getConfiguration('php');
+    const executablePath = conf.get<string>('executablePath') || 'php';
 
+    // Check path (if PHP is available and version is ^7.0.0).
+    execFile(executablePath, ['--version'], (err: NodeJS.ErrnoException, stdout: Buffer, stderr: Buffer) => {
         if (err) {
             if (err.code === 'ENOENT') {
                 vscode.window.showErrorMessage('PHP executable not found. You need PHP 7 installed and in your PATH');
