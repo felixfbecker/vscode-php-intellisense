@@ -40,7 +40,7 @@
   "scripts": {
     "compile": "tsc -p .",
     "watch": "tsc -w -p .",
-    "postinstall": "node ./node_modules/vscode/bin/install && typings prune && typings install",
+    "postinstall": "node ./node_modules/vscode/bin/install && typings prune && typings install && node_modules/.bin/typings install",
     "lint": "tslint -c tslint.json \"src/**/*.ts\""
   },
   "devDependencies": {
