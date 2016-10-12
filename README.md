@@ -11,7 +11,7 @@ instead of relying on naive regular expression parsing.
 
 **Note: This is just the VS Code extension that spawns the actual language server. The language server itself is implemented purely in PHP [in its own repository](https://github.com/felixfbecker/php-language-server), all features need to be implemented there and all issues should be reported there.**
 
-You need at least PHP 7 installed and in your PATH for the extension to work. 
+You need at least PHP 7 installed for the extension to work. You can either add it to your PATH or set the `php.executablePath` setting. 
 
 ## Features
 
