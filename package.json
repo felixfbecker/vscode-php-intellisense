@@ -51,6 +51,7 @@
     "vscode": "^0.11.17"
   },
   "dependencies": {
+    "mz": "^2.4.0",
     "semver": "^5.3.0",
     "vscode": "^0.11.18",
     "vscode-languageclient": "^2.5.0"
