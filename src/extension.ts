@@ -5,6 +5,7 @@ import * as vscode from 'vscode';
 import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient';
 import * as semver from 'semver';
 import * as net from 'net';
+import * as url from 'url';
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
 
@@ -86,6 +87,12 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     const clientOptions: LanguageClientOptions = {
         // Register the server for php documents
         documentSelector: ['php'],
+        uriConverters: {
+            // VS Code by default %-encodes even the colon after the drive letter
+            // NodeJS handles it much better
+            code2Protocol: uri => url.format(url.parse(uri.toString(true))),
+            protocol2Code: str => vscode.Uri.parse(str)
+        },
         synchronize: {
             // Synchronize the setting section 'php' to the server
             configurationSection: 'php'
