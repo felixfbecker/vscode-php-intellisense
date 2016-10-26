@@ -7,7 +7,7 @@
   "license": "ISC",
   "private": true,
   "preview": true,
-  "version": "0.0.9",
+  "version": "0.0.10",
   "engines": {
     "vscode": "^1.6.0"
   },
