@@ -15,26 +15,34 @@ You need at least PHP 7 installed for the extension to work. You can either add 
 
 ## Features
 
+### Workspace symbol search
+![Workspace symbol search demo](images/workspaceSymbol.gif)
+
+### Find all References
+![Find References demo](images/references.png)
+
+### Go to Definition
+![Go To Definition demo](images/definition.gif)
+
+### Hover
+![Hover class demo](images/hoverClass.png)
+
+![Hover parameter demo](images/hoverParam.png)
+
 ### Find all symbols
 ![Find all symbols demo](images/documentSymbol.gif)
-
-### Column-accurate error reporting
-![Error reporting demo](images/publishDiagnostics.png)
 
 ### Format code
 ![Format code demo](images/formatDocument.gif)
 
-### Workspace symbol search
-![Workspace symbol search demo](images/workspaceSymbol.gif)
+### Column-accurate error reporting
+![Error reporting demo](images/publishDiagnostics.png)
+
 
 ## Todo
  - Autocompletion
  - Rename
- - Goto definition
- - Hover
  - Signature help
- - Follow composer autoloading
-
 
 ## Contributing
 
