@@ -2,6 +2,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "felixfbecker/language-server": "^2.3.0"
+        "felixfbecker/language-server": "^3.0.0"
     }
 }
