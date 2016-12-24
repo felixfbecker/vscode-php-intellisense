@@ -12,7 +12,11 @@
     "rootDir": "src",
     "strictNullChecks": true,
     "noImplicitThis": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "typeRoots": [
+      "typings/modules",
+      "typings/globals"
+    ]
 	},
 	"exclude": [
 		"node_modules",
