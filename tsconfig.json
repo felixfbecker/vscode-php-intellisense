@@ -13,6 +13,9 @@
     "strictNullChecks": true,
     "noImplicitThis": true,
     "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "typeRoots": [
       "typings/modules",
       "typings/globals"

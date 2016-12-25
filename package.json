@@ -44,8 +44,8 @@
     "lint": "tslint -c tslint.json \"src/**/*.ts\""
   },
   "devDependencies": {
-    "tslint": "^3.15.1",
-    "typescript": "^2.0.3",
+    "tslint": "^4.2.0",
+    "typescript": "^2.1.4",
     "typings": "^2.0.0",
     "vsce": "^1.8.1",
     "vscode": "^1.0.0"
