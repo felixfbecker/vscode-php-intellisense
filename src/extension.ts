@@ -33,7 +33,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     }
 
     // Parse version and discard OS info like 7.0.8--0ubuntu0.16.04.2
-    const match = stdout.match(/PHP ([^\s]+[\d]+)/);
+    const match = stdout.match(/^PHP ([^\s]+)/m);
     if (!match) {
         vscode.window.showErrorMessage('Error parsing PHP version. Please check the output of php --version');
         return;
