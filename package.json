@@ -6,7 +6,7 @@
   "author": "Felix Becker <felix.b@outlook.com>",
   "license": "ISC",
   "private": true,
-  "preview": true,
+  "preview": false,
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.7.0"
