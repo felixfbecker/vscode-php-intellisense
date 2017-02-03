@@ -7,7 +7,9 @@ Advanced PHP IntelliSense for Visual Studio Code.
 **Note: This is just the VS Code extension that spawns the actual language server. The language server itself is implemented purely in PHP [in its own repository](https://github.com/felixfbecker/php-language-server), all features need to be implemented there and all issues should be reported there.**
 
 ## Installation
+
 You need at least PHP 7 installed for the extension to work. You can either add it to your PATH or set the `php.executablePath` setting. 
+
 I recommend to disable VS Code's built-in PHP IntelliSense by setting `php.suggest.basic` to `false` to avoid duplicate suggestions.
 
 ## Features
