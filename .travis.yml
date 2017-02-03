@@ -5,8 +5,8 @@ php:
 
 cache:
   directories:
-   - node_modules
-   - vendor
+   - $HOME/.npm
+   - $HOME/.composer/cache
 
 before_install:
  - nvm install 6.5.0
@@ -14,7 +14,7 @@ before_install:
 
 install:
  - npm install
- - composer install
+ - composer install --prefer-dist
 
 script:
  - npm run lint
