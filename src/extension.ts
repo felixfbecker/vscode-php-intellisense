@@ -97,7 +97,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
             configurationSection: 'php'
             // Notify the server about file changes to composer.json files contain in the workspace
             // fileEvents: vscode.workspace.createFileSystemWatcher('**/composer.json')
-        }
+        },
+        initializationOptions: conf.get('intellisense')
     };
 
     // Create the language client and start the client.
