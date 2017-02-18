@@ -36,6 +36,21 @@
   "activationEvents": [
     "onLanguage:php"
   ],
+  "contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "PHP IntelliSense",
+			"properties": {
+				"php.intellisense.fileTypes": {
+					"type": "array",
+					"default": [
+						".php"
+					],
+					"description": "An array of file types which should be indexed by the language server."
+				}
+			}
+		}
+	},
   "main": "./out/extension",
   "scripts": {
     "compile": "tsc -p .",
