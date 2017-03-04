@@ -93,12 +93,12 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
             protocol2Code: str => vscode.Uri.parse(str)
         },
         synchronize: {
-            // Synchronize the setting section 'php' to the server
-            configurationSection: 'php'
+            // Synchronize the setting section 'phpIntelliSense' to the server
+            configurationSection: 'phpIntelliSense'
             // Notify the server about file changes to composer.json files contain in the workspace
             // fileEvents: vscode.workspace.createFileSystemWatcher('**/composer.json')
         },
-        initializationOptions: conf.get('intellisense')
+        initializationOptions: vscode.workspace.getConfiguration('phpIntelliSense')
     };
 
     // Create the language client and start the client.

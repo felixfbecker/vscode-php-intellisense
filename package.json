@@ -41,7 +41,7 @@
 			"type": "object",
 			"title": "PHP IntelliSense",
 			"properties": {
-				"php.intellisense.fileTypes": {
+				"phpIntelliSense.fileTypes": {
 					"type": "array",
 					"default": [
 						".php"
