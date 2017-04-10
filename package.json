@@ -54,5 +54,17 @@
     "mz": "^2.4.0",
     "semver": "^5.3.0",
     "vscode-languageclient": "^3.0.3"
+  },
+  "contributes": {
+    "configuration": {
+      "properties": {
+        "php.memoryLimit": {
+          "type": "string",
+          "default": "-1",
+          "description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM(default).",
+          "pattern": "^\\d+[KMG]?$"
+        }
+      }
+    }
   }
 }
