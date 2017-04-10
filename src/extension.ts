@@ -94,9 +94,9 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         },
         synchronize: {
             // Synchronize the setting section 'php' to the server
-            configurationSection: 'php'
-            // Notify the server about file changes to composer.json files contain in the workspace
-            // fileEvents: vscode.workspace.createFileSystemWatcher('**/composer.json')
+            configurationSection: 'php',
+            // Notify the server about changes to PHP files in the workspace
+            fileEvents: vscode.workspace.createFileSystemWatcher('**/*.php')
         }
     };
 
