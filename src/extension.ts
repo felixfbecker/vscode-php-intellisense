@@ -24,6 +24,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         if (selected === 'Open settings') {
             await vscode.commands.executeCommand('workbench.action.openGlobalSettings');
         }
+        return;
     }
 
     // Check path (if PHP is available and version is ^7.0.0)
