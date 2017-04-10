@@ -12,9 +12,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     const conf = vscode.workspace.getConfiguration('php');
     const executablePath = conf.get<string>('executablePath') || 'php';
 
-    const specificSettings = vscode.workspace.getConfiguration('phpintellisense');
-
-    const memoryLimit = specificSettings.get<string>('memoryLimit') || '-1';
+    const memoryLimit = conf.get<string>('memoryLimit') || '-1';
 
     if (memoryLimit !== '-1' && !memoryLimit.match('~^(\d+)(K|M|G|)$~')) {
         const selected = await vscode.window.showErrorMessage(

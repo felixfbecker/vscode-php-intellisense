@@ -57,9 +57,8 @@
   },
   "contributes": {
     "configuration": {
-      "title": "PHP-Intellisense",
       "properties": {
-        "phpintellisense.memoryLimit": {
+        "php.memoryLimit": {
           "type": "string",
           "default": "-1",
           "description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM(default)."
