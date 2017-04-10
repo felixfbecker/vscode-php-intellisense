@@ -64,7 +64,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     const serverOptions = () => new Promise<ChildProcess | StreamInfo>((resolve, reject) => {
         function spawnServer(...args: string[]): ChildProcess {
             // The server is implemented in PHP
-            args.unshift(context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php') + ' --memory-limit=' + memoryLimit));
+            args.unshift(context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php')));
+            args.push(' --memory-limit=' + memoryLimit)
             const childProcess = spawn(executablePath, args);
             childProcess.stderr.on('data', (chunk: Buffer) => {
                 console.error(chunk + '');
