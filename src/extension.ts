@@ -14,7 +14,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 
     const memoryLimit = conf.get<string>('memoryLimit') || '-1';
 
-    if (memoryLimit !== '-1' && !memoryLimit.match('~^(\d+)(K|M|G|)$~')) {
+    if (memoryLimit !== '-1' && !/^\d+(?:K|M|G|)$/.exec(memoryLimit)) {
         const selected = await vscode.window.showErrorMessage(
             'The memory limit you\'d provided is not numeric, nor "-1" nor valid php shorthand notation!',
             'Open settings'
