@@ -34,7 +34,8 @@
     "url": "https://github.com/felixfbecker/php-language-server/issues"
   },
   "activationEvents": [
-    "onLanguage:php"
+    "onLanguage:php",
+    "workspaceContains:*.php"
   ],
   "main": "./out/extension",
   "scripts": {
