@@ -35,7 +35,7 @@
   },
   "activationEvents": [
     "onLanguage:php",
-    "workspaceContains:*.php"
+    "workspaceContains:**/*.php"
   ],
   "main": "./out/extension",
   "scripts": {
