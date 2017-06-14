@@ -9,7 +9,7 @@
   "preview": false,
   "version": "1.3.0",
   "engines": {
-    "vscode": "^1.7.0"
+    "vscode": "^1.13.0"
   },
   "keywords": [
     "php",
