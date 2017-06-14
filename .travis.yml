@@ -33,3 +33,4 @@ deploy:
   file_glob: true
   on:
     repo: felixfbecker/vscode-php-intellisense
+    tags: true
