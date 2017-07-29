@@ -4,7 +4,7 @@
   "description": "Advanced Autocompletion and Refactoring support for PHP",
   "publisher": "felixfbecker",
   "author": "Felix Becker <felix.b@outlook.com>",
-  "license": "ISC",
+  "license": "MIT",
   "private": true,
   "preview": false,
   "version": "1.5.0",
