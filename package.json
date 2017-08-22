@@ -51,7 +51,6 @@
     "@types/semver": "^5.3.34",
     "tslint": "^5.0.0",
     "typescript": "^2.1.4",
-    "typings": "^2.0.0",
     "vsce": "^1.8.1",
     "vscode": "^1.0.0"
   },
