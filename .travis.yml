@@ -18,7 +18,7 @@ install:
 
 script:
   - npm run lint
-  - npm run compile
+  - npm run build
 
 # If build on a tag, publish a new release and upload vsix to the GitHub release
 before_deploy:
