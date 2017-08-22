@@ -39,7 +39,7 @@
   ],
   "main": "./out/extension",
   "scripts": {
-    "compile": "tsc -p .",
+    "build": "tsc -p .",
     "watch": "tsc -w -p .",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "lint": "tslint -c tslint.json \"src/**/*.ts\""
