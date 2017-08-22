@@ -22,8 +22,8 @@ script:
 
 # If build on a tag, publish a new release and upload vsix to the GitHub release
 before_deploy:
-  - vsce package
-  - vsce publish -p $VSCE_TOKEN
+  - ./node_modules/.bin/vsce package
+  - ./node_modules/.bin/vsce publish -p $VSCE_TOKEN
 
 deploy:
   provider: releases
