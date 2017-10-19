@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
-    "@types/mz": "0.0.31",
+    "@types/mz": "^0.0.31",
     "@types/node": "^8.0.24",
     "@types/semver": "^5.3.34",
     "tslint": "^5.0.0",
