@@ -12,5 +12,5 @@ collectors:
   actors:
   # pull requests for any update to the language server
   - type: php-composer
-    dependencies: "^felixfbecker/php-language-server$"
+    dependencies: "^felixfbecker/language-server$"
     versions: "Y.Y.Y"
