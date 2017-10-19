@@ -1,0 +1,16 @@
+collectors:
+
+- type: js-npm
+  path: /
+  actors:
+  # pull requests for new major versions
+  - type: js-npm
+    versions: "Y.0.0"
+
+- type: php-composer
+  path: /
+  actors:
+  # pull requests for any update to the language server
+  - type: php-composer
+    dependencies: "^felixfbecker/php-language-server$"
+    versions: "Y.Y.Y"
