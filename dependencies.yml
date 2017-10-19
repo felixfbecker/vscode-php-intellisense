@@ -3,19 +3,14 @@ collectors:
 - type: js-npm
   path: /
   actors:
-  # pull requests for updates to our major version
+  # pull requests for new major versions
   - type: js-npm
-    versions: "L.Y.Y"
-  # create issues for new major versions
-  - type: repo-issue
     versions: "Y.0.0"
 
 - type: php-composer
   path: /
   actors:
-  # pull requests for updates to our major version
+  # pull requests for any update to the language server
   - type: php-composer
-    versions: "L.Y.Y"
-  # create issues for new major versions
-  - type: repo-issue
-    versions: "Y.0.0"
+    dependencies: "^felixfbecker/php-language-server$"
+    versions: "Y.Y.Y"
