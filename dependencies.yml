@@ -14,18 +14,21 @@ collectors:
 
   - type: php-composer
     dependencies: "^felixfbecker/language-server$"
-    # if it was a patch release, make semantic-release release a patch of the extension
-    commit_message_prefix: "fix: "
     versions: "L.L.Y"
+    settings:
+      # if it was a patch release, make semantic-release release a patch of the extension
+      commit_message_prefix: "fix: "
 
   - type: php-composer
-    # if it was a minor release, make semantic-release release a minor of the extension
-    dependencies: "^felixfbecker/language-server$"
-    commit_message_prefix: "feat: "
     versions: "L.Y.0"
+    dependencies: "^felixfbecker/language-server$"
+    settings:
+      # if it was a minor release, make semantic-release release a minor of the extension
+      commit_message_prefix: "feat: "
 
   - type: php-composer
     dependencies: "^felixfbecker/language-server$"
-    # majors could be anything, open a PR and let a human handle it
-    commit_message_prefix: "chore: "
     versions: "Y.0.0"
+    settings:
+      # majors could be anything, open a PR and let a human handle it
+      commit_message_prefix: "chore: "
