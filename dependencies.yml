@@ -7,10 +7,25 @@ collectors:
   - type: js-npm
     versions: "Y.0.0"
 
+# pull requests for any update to the language server
 - type: php-composer
   path: /
   actors:
-  # pull requests for any update to the language server
+
   - type: php-composer
     dependencies: "^felixfbecker/language-server$"
-    versions: "Y.Y.Y"
+    # if it was a patch release, make semantic-release release a patch of the extension
+    commit_message_prefix: "fix: "
+    versions: "L.L.Y"
+
+  - type: php-composer
+    # if it was a minor release, make semantic-release release a minor of the extension
+    dependencies: "^felixfbecker/language-server$"
+    commit_message_prefix: "feat: "
+    versions: "L.Y.0"
+
+  - type: php-composer
+    dependencies: "^felixfbecker/language-server$"
+    # majors could be anything, open a PR and let a human handle it
+    commit_message_prefix: "chore: "
+    versions: "Y.0.0"

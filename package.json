@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "preview": false,
-  "version": "1.5.2",
+  "version": "0.0.0-development",
   "engines": {
     "vscode": "^1.17.1"
   },
@@ -42,15 +42,21 @@
     "build": "tsc -p .",
     "watch": "tsc -w -p .",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "lint": "tslint -c tslint.json \"src/**/*.ts\""
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
+    "semantic-release": "semantic-release pre && vsce publish -p $VSCE_TOKEN && semantic-release post",
+    "commitmsg": "validate-commit-msg"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/mz": "^0.0.31",
     "@types/node": "^8.0.24",
     "@types/semver": "^5.3.34",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.3",
+    "semantic-release": "^8.2.0",
     "tslint": "^5.0.0",
     "typescript": "^2.1.4",
+    "validate-commit-msg": "^2.14.0",
     "vsce": "^1.8.1",
     "vscode": "^1.0.0"
   },
@@ -58,6 +64,11 @@
     "mz": "^2.4.0",
     "semver": "^5.3.0",
     "vscode-languageclient": "^3.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "contributes": {
     "configuration": {

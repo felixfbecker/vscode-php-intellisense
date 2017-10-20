@@ -9,8 +9,8 @@ cache:
     - $HOME/.composer/cache
 
 before_install:
-  - nvm install 6.5.0
-  - nvm use 6.5.0
+  - nvm install 8
+  - nvm use 8
 
 install:
   - npm install
@@ -20,18 +20,9 @@ script:
   - npm run lint
   - npm run build
 
-# If build on a tag, publish a new release and upload vsix to the GitHub release
-before_deploy:
-  - ./node_modules/.bin/vsce package
-  - ./node_modules/.bin/vsce publish -p $VSCE_TOKEN
+after_success:
+  - npm run semantic-release
 
-deploy:
-  provider: releases
-  skip_cleanup: true
-  api_key:
-    secure: Jxe2EeDH4+pd4e/GhwUz+CQo5W4K7qBjdXQce9v+hUJZzoZgcwfkxZny0EWM53YyC6W8/10OZlo06KB2ZyiS90vYk9h0Wy5qva4le0m+ekW6u2YNexUd22z+9n6eKr5T+wzx60TTSHNLIprGyJfWyK5Q1vJbOzX0eBartXvu4NgXFakrBgykbur+8NwHQuZSAsiAnjooSTrVV+IJruCNti1ZhkVbwyjMMOzMvXU7y7wx2KZ30p0UL0S0/DbPRtfKJeLrLhkUYSVaxcoNsExVJaWKWrWiu8GZ6WBL0uryhSptobxllrFWH93ox0IDw2WGJNKMronGdxbafle20ILLK/q/0HN0QRa0h8dcFEerLyMSLOxF/dgdVVvlqockCC4/fISreTjrFAd8o0RLL+BIgfvrTmSsHJ0dD1sOVVO2ZnMmYOia0Ehex1wBBO2PXE+yHQBqwVjIEqPx5cwdO94Js1RCFiMaJmAEMaF1+JceWobwCsIpGyhsq3202XtnbPxHyi5o1IcsQWeMDdo2GsNozJgCMf8IuWB+z5jKa6Vlz92TXmGEPUAzTERHyGKNMKN9oHw0WhUkgFVt4dn1wMLGnFjy+BSrlmBzg4UCYT1LD2HYCkhQPrOgHGLiCBiBENoRCXOr/01mZpu16ibpJxMf114udtwA2TThHrmnRgWNXms=
-  file: php-intellisense-*.vsix
-  file_glob: true
-  on:
-    repo: felixfbecker/vscode-php-intellisense
-    tags: true
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
