@@ -13,6 +13,8 @@ cache:
     - $HOME/.composer/cache
 
 before_install:
+  - git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+  - git fetch --tags
   - nvm install 8
   - nvm use 8
 
