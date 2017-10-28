@@ -267,25 +267,25 @@
         },
         {
             "name": "felixfbecker/advanced-json-rpc",
-            "version": "v2.0.3",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/felixfbecker/php-advanced-json-rpc.git",
-                "reference": "543ffb38b9af47f16404ab2daec5aaf225dcb531"
+                "reference": "29f1d8c2c17f8c04f9768d382b72aeeb0715ebb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/felixfbecker/php-advanced-json-rpc/zipball/543ffb38b9af47f16404ab2daec5aaf225dcb531",
-                "reference": "543ffb38b9af47f16404ab2daec5aaf225dcb531",
+                "url": "https://api.github.com/repos/felixfbecker/php-advanced-json-rpc/zipball/29f1d8c2c17f8c04f9768d382b72aeeb0715ebb8",
+                "reference": "29f1d8c2c17f8c04f9768d382b72aeeb0715ebb8",
                 "shasum": ""
             },
             "require": {
                 "netresearch/jsonmapper": "^1.0",
                 "php": ">=7.0",
-                "phpdocumentor/reflection-docblock": "^3.1"
+                "phpdocumentor/reflection-docblock": "^4.0.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.5"
+                "phpunit/phpunit": "^6.0.0"
             },
             "type": "library",
             "autoload": {
@@ -304,30 +304,30 @@
                 }
             ],
             "description": "A more advanced JSONRPC implementation",
-            "time": "2017-06-22T12:18:44+00:00"
+            "time": "2017-10-28T21:26:16+00:00"
         },
         {
             "name": "felixfbecker/language-server",
-            "version": "v4.6.2",
+            "version": "v4.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/felixfbecker/php-language-server.git",
-                "reference": "1240f25e0192f7c5282b86427656e54687cc3278"
+                "reference": "9e551a310b5e510989a1bd44777349e98fc132c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/felixfbecker/php-language-server/zipball/1240f25e0192f7c5282b86427656e54687cc3278",
-                "reference": "1240f25e0192f7c5282b86427656e54687cc3278",
+                "url": "https://api.github.com/repos/felixfbecker/php-language-server/zipball/9e551a310b5e510989a1bd44777349e98fc132c4",
+                "reference": "9e551a310b5e510989a1bd44777349e98fc132c4",
                 "shasum": ""
             },
             "require": {
                 "composer/composer": "^1.3",
-                "felixfbecker/advanced-json-rpc": "^2.0",
+                "felixfbecker/advanced-json-rpc": "^3.0.0",
                 "jetbrains/phpstorm-stubs": "dev-master",
                 "microsoft/tolerant-php-parser": "^0.0.6",
                 "netresearch/jsonmapper": "^1.0",
                 "php": "^7.0",
-                "phpdocumentor/reflection-docblock": "~3.1.1",
+                "phpdocumentor/reflection-docblock": "^4.0.0",
                 "sabre/event": "^5.0",
                 "sabre/uri": "^2.0",
                 "squizlabs/php_codesniffer": "3.0.0RC3",
@@ -374,7 +374,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2017-10-19T21:45:36+00:00"
+            "time": "2017-10-28T20:59:02+00:00"
         },
         {
             "name": "jetbrains/phpstorm-stubs",
@@ -382,12 +382,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "a6929752d29a495a5358ea1950bcc9f2e85ab59b"
+                "reference": "2b7028a2a2411b140be906a649500f5855808cc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/a6929752d29a495a5358ea1950bcc9f2e85ab59b",
-                "reference": "a6929752d29a495a5358ea1950bcc9f2e85ab59b",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/2b7028a2a2411b140be906a649500f5855808cc3",
+                "reference": "2b7028a2a2411b140be906a649500f5855808cc3",
                 "shasum": ""
             },
             "type": "library",
@@ -407,7 +407,7 @@
                 "stubs",
                 "type"
             ],
-            "time": "2017-10-23 15:16:47"
+            "time": "2017-10-27 19:11:35"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -614,22 +614,22 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "3.1.1",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e"
+                "reference": "2d3d238c433cf69caeb4842e97a3223a116f94b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/8331b5efe816ae05461b7ca1e721c01b46bafb3e",
-                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/2d3d238c433cf69caeb4842e97a3223a116f94b2",
+                "reference": "2d3d238c433cf69caeb4842e97a3223a116f94b2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5",
+                "php": "^7.0",
                 "phpdocumentor/reflection-common": "^1.0@dev",
-                "phpdocumentor/type-resolver": "^0.2.0",
+                "phpdocumentor/type-resolver": "^0.4.0",
                 "webmozart/assert": "^1.0"
             },
             "require-dev": {
@@ -655,24 +655,24 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-09-30T07:12:33+00:00"
+            "time": "2017-08-30T18:51:59+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "0.2.1",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb"
+                "reference": "9c977708995954784726e25d0cd1dddf4e65b0f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb",
-                "reference": "e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/9c977708995954784726e25d0cd1dddf4e65b0f7",
+                "reference": "9c977708995954784726e25d0cd1dddf4e65b0f7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5",
+                "php": "^5.5 || ^7.0",
                 "phpdocumentor/reflection-common": "^1.0"
             },
             "require-dev": {
@@ -702,7 +702,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2016-11-25T06:54:22+00:00"
+            "time": "2017-07-14T14:27:02+00:00"
         },
         {
             "name": "psr/log",
