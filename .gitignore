@@ -1,6 +1,5 @@
-out/
 node_modules/
+out/
 vendor/
-typings/
 .DS_Store
 package-lock.json

@@ -20,7 +20,7 @@ before_install:
 
 install:
   - npm install
-  - composer install --prefer-dist
+  - composer install --prefer-dist --optimize-autoloader
 
 script:
   - npm run lint
