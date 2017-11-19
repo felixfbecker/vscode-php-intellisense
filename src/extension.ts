@@ -62,11 +62,24 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     }
 
     const serverOptions = () => new Promise<ChildProcess | StreamInfo>((resolve, reject) => {
-        function spawnServer(...args: string[]): ChildProcess {
+        // Use a TCP socket because of problems with blocking STDIO
+        const server = net.createServer(socket => {
+            // 'connection' listener
+            console.log('PHP process connected');
+            socket.on('end', () => {
+                console.log('PHP process disconnected');
+            });
+            server.close();
+            resolve({ reader: socket, writer: socket });
+        });
+        // Listen on random port
+        server.listen(0, '127.0.0.1', () => {
             // The server is implemented in PHP
-            args.unshift(context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php')));
-            args.push('--memory-limit=' + memoryLimit);
-            const childProcess = spawn(executablePath, args);
+            const childProcess = spawn(executablePath, [
+                context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php')),
+                '--tcp=127.0.0.1:' + server.address().port,
+                '--memory-limit=' + memoryLimit
+            ]);
             childProcess.stderr.on('data', (chunk: Buffer) => {
                 console.error(chunk + '');
             });
@@ -74,26 +87,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
                 console.log(chunk + '');
             });
             return childProcess;
-        }
-        if (process.platform === 'win32') {
-            // Use a TCP socket on Windows because of blocking STDIO
-            const server = net.createServer(socket => {
-                // 'connection' listener
-                console.log('PHP process connected');
-                socket.on('end', () => {
-                    console.log('PHP process disconnected');
-                });
-                server.close();
-                resolve({ reader: socket, writer: socket });
-            });
-            // Listen on random port
-            server.listen(0, '127.0.0.1', () => {
-                spawnServer('--tcp=127.0.0.1:' + server.address().port);
-            });
-        } else {
-            // Use STDIO on Linux / Mac
-            resolve(spawnServer());
-        }
+        });
     });
 
     // Options to control the language client
