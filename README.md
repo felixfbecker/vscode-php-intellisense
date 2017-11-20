@@ -34,11 +34,11 @@ I recommend to disable VS Code's built-in PHP IntelliSense by setting `php.sugge
 ### Find all symbols
 ![Find all symbols demo](images/documentSymbol.gif)
 
-### Format code
-![Format code demo](images/formatDocument.gif)
-
 ### Column-accurate error reporting
 ![Error reporting demo](images/publishDiagnostics.png)
+
+### Format code
+Please use a dedicated extension like [PHP CodeSniffer](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs).
 
 
 ## Todo
