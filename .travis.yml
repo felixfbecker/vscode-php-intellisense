@@ -12,22 +12,29 @@ cache:
     - $HOME/.npm
     - $HOME/.composer/cache
 
-before_install:
-  - git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
-  - git fetch --tags
-  - nvm install 8
-  - nvm use 8
-
 install:
-  - npm install
-  - composer install --prefer-dist --optimize-autoloader
+  - composer install --prefer-dist
 
 script:
   - npm run lint
   - npm run build
 
-after_success:
-  - npm run semantic-release
+jobs:
+  include:
+    - stage: release
+      php: '7.0'
+      install:
+        - composer install --prefer-dist --no-interaction --optimize-autoloader
+        - nvm install 8
+        - nvm use 8
+        - npm install
+      script:
+        - npm run semantic-release
+
+stages:
+  - test
+  - name: release
+    if: branch = master AND type = push AND fork = false
 
 branches:
   except:

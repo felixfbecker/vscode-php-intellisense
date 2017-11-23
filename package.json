@@ -1,104 +1,113 @@
 {
-	"name": "php-intellisense",
-	"displayName": "PHP IntelliSense",
-	"description": "Advanced Autocompletion and Refactoring support for PHP",
-	"publisher": "felixfbecker",
-	"author": "Felix Becker <felix.b@outlook.com>",
-	"license": "MIT",
-	"private": true,
-	"preview": false,
-	"version": "1.5.4",
-	"engines": {
-		"vscode": "^1.17.1"
-	},
-	"keywords": [
-		"php",
-		"intellisense",
-		"autocompletion",
-		"help",
-		"refactor"
-	],
-	"categories": [
-		"Languages"
-	],
-	"icon": "images/logo.png",
-	"galleryBanner": {
-		"color": "#6682BA",
-		"theme": "dark"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/felixfbecker/vscode-php-intellisense.git"
-	},
-	"bugs": {
-		"url": "https://github.com/felixfbecker/php-language-server/issues"
-	},
-	"activationEvents": [
-		"onLanguage:php",
-		"workspaceContains:**/*.php"
-	],
-	"main": "./out/extension",
-	"scripts": {
-		"build": "tsc -p .",
-		"watch": "tsc -w -p .",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"lint": "tslint -c tslint.json \"src/**/*.ts\"",
-		"semantic-release": "semantic-release pre && vsce publish -p $VSCE_TOKEN && semantic-release post",
-		"commitmsg": "validate-commit-msg"
-	},
-	"devDependencies": {
-		"@types/mocha": "^2.2.42",
-		"@types/mz": "^0.0.31",
-		"@types/node": "^8.0.24",
-		"@types/semver": "^5.3.34",
-		"cz-conventional-changelog": "^2.0.0",
-		"husky": "^0.14.3",
-		"last-release-git": "0.0.3",
-		"semantic-release": "^8.2.0",
-		"tslint": "^5.0.0",
-		"typescript": "^2.1.4",
-		"validate-commit-msg": "^2.14.0",
-		"vsce": "^1.8.1",
-		"vscode": "^1.0.0"
-	},
-	"dependencies": {
-		"mz": "^2.4.0",
-		"semver": "^5.3.0",
-		"vscode-languageclient": "^3.0.3"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	},
-	"release": {
-		"getLastRelease": "last-release-git"
-	},
-	"contributes": {
-		"configuration": {
-			"type": "object",
-			"title": "PHP IntelliSense",
-			"properties": {
-				"php.memoryLimit": {
-					"type": "string",
-					"default": "-1",
-					"description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM(default).",
-					"pattern": "^\\d+[KMG]?$"
-				},
-				"php.executablePath": {
-					"type": [
-						"string",
-						"null"
-					],
-					"default": null,
-					"description": "The path to a PHP 7+ executable."
-				}
-			}
-		}
-	},
-	"__metadata": {
-		"id": "5e69f001-f945-4c97-baf0-320d82a153b3",
-		"publisherDisplayName": "Felix Becker",
-		"publisherId": "2bbbc574-aea7-4866-8f36-2d56ef365f8c"
-	}
+  "name": "php-intellisense",
+  "displayName": "PHP IntelliSense",
+  "description": "Advanced Autocompletion and Refactoring support for PHP",
+  "publisher": "felixfbecker",
+  "author": "Felix Becker <felix.b@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "preview": false,
+  "version": "1.5.4",
+  "engines": {
+    "vscode": "^1.17.1"
+  },
+  "keywords": [
+    "php",
+    "intellisense",
+    "autocompletion",
+    "help",
+    "refactor"
+  ],
+  "categories": [
+    "Languages"
+  ],
+  "icon": "images/logo.png",
+  "galleryBanner": {
+    "color": "#6682BA",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felixfbecker/vscode-php-intellisense.git"
+  },
+  "bugs": {
+    "url": "https://github.com/felixfbecker/php-language-server/issues"
+  },
+  "activationEvents": [
+    "onLanguage:php",
+    "workspaceContains:**/*.php"
+  ],
+  "main": "./out/extension",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
+    "semantic-release": "semantic-release",
+    "commitmsg": "validate-commit-msg"
+  },
+  "devDependencies": {
+    "@semantic-release/github": "^1.0.0",
+    "@types/mocha": "^2.2.42",
+    "@types/mz": "^0.0.31",
+    "@types/node": "^8.0.24",
+    "@types/semver": "^5.3.34",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.3",
+    "semantic-release": "^10.0.0",
+    "semantic-release-vsce": "^0.1.1",
+    "tslint": "^5.0.0",
+    "typescript": "^2.1.4",
+    "validate-commit-msg": "^2.14.0",
+    "vscode": "^1.0.0"
+  },
+  "dependencies": {
+    "mz": "^2.4.0",
+    "semver": "^5.3.0",
+    "vscode-languageclient": "^3.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "verifyConditions": [
+      "semantic-release-vsce",
+      "@semantic-release/github"
+    ],
+    "getLastRelease": "semantic-release-vsce",
+    "publish": [
+      {
+        "path": "semantic-release-vsce",
+        "packageVsix": "php-intellisense.vsix"
+      },
+      {
+        "path": "@semantic-release/github",
+        "assets": "php-intellisense.vsix"
+      }
+    ]
+  },
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "PHP IntelliSense",
+      "properties": {
+        "php.memoryLimit": {
+          "type": "string",
+          "default": "-1",
+          "description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM(default).",
+          "pattern": "^\\d+[KMG]?$"
+        },
+        "php.executablePath": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "The path to a PHP 7+ executable."
+        }
+      }
+    }
+  }
 }
