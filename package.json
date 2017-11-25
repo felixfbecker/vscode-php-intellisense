@@ -55,7 +55,7 @@
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.3",
     "semantic-release": "^10.0.0",
-    "semantic-release-vsce": "^0.1.2",
+    "semantic-release-vsce": "1.0.0",
     "tslint": "^5.0.0",
     "typescript": "^2.1.4",
     "validate-commit-msg": "^2.14.0",
