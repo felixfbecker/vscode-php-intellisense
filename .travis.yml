@@ -17,6 +17,7 @@ script:
 
 jobs:
   include:
+    - stage: test
     - stage: release
       php: '7.0'
       install:
