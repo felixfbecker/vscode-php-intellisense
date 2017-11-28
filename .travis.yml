@@ -8,8 +8,12 @@ cache:
     - $HOME/.npm
     - $HOME/.composer/cache
 
+before_install:
+  - nvm install 8
+  - nvm use 8
+
 install:
-  - composer install --prefer-dist
+  - npm install
 
 script:
   - npm run lint
@@ -21,10 +25,8 @@ jobs:
     - stage: release
       php: '7.0'
       install:
-        - composer install --prefer-dist --no-interaction --optimize-autoloader
-        - nvm install 8
-        - nvm use 8
         - npm install
+        - composer install --prefer-dist --no-interaction --optimize-autoloader
       script:
         - npm run build
         - npm run semantic-release
