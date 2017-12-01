@@ -1011,44 +1011,45 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.13",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "63cd7960a0a522c3537f6326706d7f3b8de65805"
+                "reference": "9468ad3fba3a5e1f0dc12a96e50e84cddb923cf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/63cd7960a0a522c3537f6326706d7f3b8de65805",
-                "reference": "63cd7960a0a522c3537f6326706d7f3b8de65805",
+                "url": "https://api.github.com/repos/symfony/console/zipball/9468ad3fba3a5e1f0dc12a96e50e84cddb923cf0",
+                "reference": "9468ad3fba3a5e1f0dc12a96e50e84cddb923cf0",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.5.9|>=7.0.8",
-                "symfony/debug": "~2.8|~3.0",
+                "symfony/debug": "~2.8|~3.0|~4.0",
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
-                "symfony/dependency-injection": "<3.3"
+                "symfony/dependency-injection": "<3.4",
+                "symfony/process": "<3.3"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~3.3",
-                "symfony/dependency-injection": "~3.3",
-                "symfony/event-dispatcher": "~2.8|~3.0",
-                "symfony/filesystem": "~2.8|~3.0",
-                "symfony/process": "~2.8|~3.0"
+                "symfony/config": "~3.3|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
+                "symfony/lock": "~3.4|~4.0",
+                "symfony/process": "~3.3|~4.0"
             },
             "suggest": {
                 "psr/log": "For using the console logger",
                 "symfony/event-dispatcher": "",
-                "symfony/filesystem": "",
+                "symfony/lock": "",
                 "symfony/process": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -1075,7 +1076,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-16T15:24:32+00:00"
+            "time": "2017-11-29T13:28:14+00:00"
         },
         {
             "name": "symfony/debug",
