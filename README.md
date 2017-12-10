@@ -17,6 +17,9 @@ I recommend to disable VS Code's built-in PHP IntelliSense by setting `php.sugge
 ### Completion
 ![Completion search demo](images/completion.gif)
 
+### Signature Help
+![Signature help demo](images/signatureHelp.gif)
+
 ### Workspace symbol search
 ![Workspace symbol search demo](images/workspaceSymbol.gif)
 
