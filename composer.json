@@ -2,7 +2,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "felixfbecker/language-server": "v5.1.2"
+        "felixfbecker/language-server": "v5.2.0"
     },
     "scripts": {
         "parse-stubs": "LanguageServer\\ComposerScripts::parseStubs",
