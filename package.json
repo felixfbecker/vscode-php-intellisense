@@ -94,7 +94,7 @@
       "properties": {
         "php.memoryLimit": {
           "type": "string",
-          "default": "4G",
+          "default": "4095M",
           "description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM (default is 4G).",
           "pattern": "^\\d+[KMG]?$"
         },
