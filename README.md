@@ -43,12 +43,12 @@ I recommend to disable VS Code's built-in PHP IntelliSense by setting `php.sugge
 ### Code style linting
 Please use a dedicated extension like [PHP CodeSniffer](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs).
 
-[Code style linting demo](images/phpcs.png)
+![Code style linting demo](images/phpcs.png)
 
 ### Format code
 Please use a dedicated extension like [PHP CS Fixer](https://marketplace.visualstudio.com/items?itemName=junstyle.php-cs-fixer).
 
-[Format code demo](images/phpcsfixer.gif)
+![Format code demo](images/phpcsfixer.gif)
 
 
 ## Todo
