@@ -47,7 +47,7 @@
     "commitmsg": "validate-commit-msg"
   },
   "devDependencies": {
-    "@semantic-release/git": "^3.0.0",
+    "@semantic-release/git": "^2.0.0",
     "@types/mocha": "^2.2.42",
     "@types/mz": "^0.0.31",
     "@types/node": "^8.0.24",
