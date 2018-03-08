@@ -54,7 +54,7 @@
     "@types/semver": "^5.3.34",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.3",
-    "semantic-release": "^12.4.1",
+    "semantic-release": "15.0.0",
     "semantic-release-vsce": "^2.0.0",
     "tslint": "^5.0.0",
     "typescript": "^2.1.4",
