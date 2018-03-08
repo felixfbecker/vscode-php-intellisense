@@ -47,14 +47,15 @@
     "commitmsg": "validate-commit-msg"
   },
   "devDependencies": {
+    "@semantic-release/git": "^2.0.0",
     "@types/mocha": "^2.2.42",
     "@types/mz": "^0.0.31",
     "@types/node": "^8.0.24",
     "@types/semver": "^5.3.34",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.3",
-    "semantic-release": "^11.0.0",
-    "semantic-release-vsce": "^1.0.0",
+    "semantic-release": "^12.4.1",
+    "semantic-release-vsce": "^2.0.0",
     "tslint": "^5.0.0",
     "typescript": "^2.1.4",
     "validate-commit-msg": "^2.14.0",
@@ -75,7 +76,7 @@
       "semantic-release-vsce",
       "@semantic-release/github"
     ],
-    "getLastRelease": "semantic-release-vsce",
+    "getLastRelease": "@semantic-release/git",
     "publish": [
       {
         "path": "semantic-release-vsce",
