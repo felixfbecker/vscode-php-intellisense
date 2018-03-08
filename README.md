@@ -48,9 +48,6 @@ Please use a dedicated extension like [PHP CodeSniffer](https://marketplace.visu
 ### Format code
 Please use a dedicated extension like [PHP CS Fixer](https://marketplace.visualstudio.com/items?itemName=junstyle.php-cs-fixer).
 
-![Format code demo](images/phpcsfixer.gif)
-
-
 ## Todo
  - Rename
  - Signature help
