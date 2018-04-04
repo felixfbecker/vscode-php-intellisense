@@ -93,7 +93,10 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     // Options to control the language client
     const clientOptions: LanguageClientOptions = {
         // Register the server for php documents
-        documentSelector: ['php'],
+        documentSelector: [
+            { scheme: 'file', language: 'php' },
+            { scheme: 'untitled', language: 'php' }
+        ],
         uriConverters: {
             // VS Code by default %-encodes even the colon after the drive letter
             // NodeJS handles it much better
