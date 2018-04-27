@@ -56,7 +56,7 @@ Clone whole repository and in root directory execute:
 ```bash
 composer install
 npm install
-npm run compile
+npm run build
 code .
 ```
 The last command will open the folder in VS Code. Hit `F5` to launch an Extension Development Host with the extension.
