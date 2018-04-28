@@ -8,7 +8,7 @@ Advanced PHP IntelliSense for Visual Studio Code.
 
 ## Installation
 
-You need at least PHP 7 installed for the extension to work. You can either add it to your PATH or set the `php.executablePath` setting.
+You need at least PHP 7 installed for the extension to work. You can either add it to your PATH or set the `php.validate.executablePath` setting.
 
 I recommend to disable VS Code's built-in PHP IntelliSense by setting `php.suggest.basic` to `false` to avoid duplicate suggestions.
 
