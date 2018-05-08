@@ -14,6 +14,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 
     const memoryLimit = conf.get<string>('memoryLimit') || '4095M';
 
+    const tcpHost = conf.get<string>('tcpHost') || '127.0.0.1';
+
     if (memoryLimit !== '-1' && !/^\d+[KMG]?$/.exec(memoryLimit)) {
         const selected = await vscode.window.showErrorMessage(
             'The memory limit you\'d provided is not numeric, nor "-1" nor valid php shorthand notation!',
@@ -73,11 +75,11 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
             resolve({ reader: socket, writer: socket });
         });
         // Listen on random port
-        server.listen(0, '127.0.0.1', () => {
+        server.listen(0, tcpHost, () => {
             // The server is implemented in PHP
             const childProcess = spawn(executablePath, [
                 context.asAbsolutePath(path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php')),
-                '--tcp=127.0.0.1:' + server.address().port,
+                '--tcp=' + tcpHost + ':' + server.address().port,
                 '--memory-limit=' + memoryLimit
             ]);
             childProcess.stderr.on('data', (chunk: Buffer) => {
