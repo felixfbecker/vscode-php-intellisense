@@ -50,7 +50,7 @@
     "@semantic-release/git": "^2.0.0",
     "@types/mocha": "^2.2.42",
     "@types/mz": "^0.0.31",
-    "@types/node": "^8.0.24",
+    "@types/node": "10.0.0",
     "@types/semver": "^5.3.34",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.3",
