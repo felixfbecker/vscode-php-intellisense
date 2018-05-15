@@ -804,16 +804,16 @@
         },
         {
             "name": "sabre/event",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabre-io/event.git",
-                "reference": "3cb619803d5e3e38ed7c309250da5589676aedc8"
+                "reference": "f5cf802d240df1257866d8813282b98aee3bc548"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabre-io/event/zipball/3cb619803d5e3e38ed7c309250da5589676aedc8",
-                "reference": "3cb619803d5e3e38ed7c309250da5589676aedc8",
+                "url": "https://api.github.com/repos/sabre-io/event/zipball/f5cf802d240df1257866d8813282b98aee3bc548",
+                "reference": "f5cf802d240df1257866d8813282b98aee3bc548",
                 "shasum": ""
             },
             "require": {
@@ -860,7 +860,7 @@
                 "reactor",
                 "signal"
             ],
-            "time": "2017-06-10T09:11:18+00:00"
+            "time": "2018-03-05T13:55:47+00:00"
         },
         {
             "name": "sabre/uri",
