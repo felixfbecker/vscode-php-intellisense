@@ -40,9 +40,11 @@ I recommend to disable VS Code's built-in PHP IntelliSense by setting `php.sugge
 ### Column-accurate error reporting
 ![Error reporting demo](images/publishDiagnostics.png)
 
-### Format code
+### Code style linting
 Please use a dedicated extension like [PHP CodeSniffer](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs).
 
+### Format code
+Please use a dedicated extension like [PHP CS Fixer](https://marketplace.visualstudio.com/items?itemName=junstyle.php-cs-fixer).
 
 ## Todo
  - Rename
@@ -54,7 +56,7 @@ Clone whole repository and in root directory execute:
 ```bash
 composer install
 npm install
-npm run compile
+npm run build
 code .
 ```
 The last command will open the folder in VS Code. Hit `F5` to launch an Extension Development Host with the extension.
