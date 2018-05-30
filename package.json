@@ -47,15 +47,14 @@
     "commitmsg": "validate-commit-msg"
   },
   "devDependencies": {
-    "@semantic-release/git": "^2.0.0",
     "@types/mocha": "5.0.0",
     "@types/mz": "^0.0.31",
     "@types/node": "^8.0.24",
     "@types/semver": "^5.3.34",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.3",
-    "semantic-release": "^12.4.1",
-    "semantic-release-vsce": "^2.0.0",
+    "semantic-release": "^15.5.0",
+    "semantic-release-vsce": "^2.1.0",
     "tslint": "^5.0.0",
     "typescript": "^2.1.4",
     "validate-commit-msg": "^2.14.0",
@@ -76,12 +75,12 @@
       "semantic-release-vsce",
       "@semantic-release/github"
     ],
-    "getLastRelease": "@semantic-release/git",
+    "prepare": {
+      "path": "semantic-release-vsce",
+      "packageVsix": "php-intellisense.vsix"
+    },
     "publish": [
-      {
-        "path": "semantic-release-vsce",
-        "packageVsix": "php-intellisense.vsix"
-      },
+      "semantic-release-vsce",
       {
         "path": "@semantic-release/github",
         "assets": "php-intellisense.vsix"
