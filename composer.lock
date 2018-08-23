@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d7a96cebb3857223787685e8f9a61be",
+    "content-hash": "15612201b3635f6b20626dd76abf7901",
     "packages": [
         {
             "name": "composer/xdebug-handler",
@@ -93,16 +93,16 @@
         },
         {
             "name": "felixfbecker/language-server",
-            "version": "v5.4.1",
+            "version": "v5.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/felixfbecker/php-language-server.git",
-                "reference": "fe33c8cd7fb962af6853a8e99aeb47d9881d13aa"
+                "reference": "3931c8848ff4b5696501d26cad165520cca813a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/felixfbecker/php-language-server/zipball/fe33c8cd7fb962af6853a8e99aeb47d9881d13aa",
-                "reference": "fe33c8cd7fb962af6853a8e99aeb47d9881d13aa",
+                "url": "https://api.github.com/repos/felixfbecker/php-language-server/zipball/3931c8848ff4b5696501d26cad165520cca813a8",
+                "reference": "3931c8848ff4b5696501d26cad165520cca813a8",
                 "shasum": ""
             },
             "require": {
@@ -160,7 +160,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2018-04-26T22:53:21+00:00"
+            "time": "2018-08-22T18:48:14+00:00"
         },
         {
             "name": "jetbrains/phpstorm-stubs",
