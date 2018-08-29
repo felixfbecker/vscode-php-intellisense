@@ -62,6 +62,20 @@
           ],
           "default": [".php"],
           "description": "List of file types that should be indexed by the php language server. (Restart required)"
+        },
+        "php.fileSizeLimit": {
+          "type": [
+            "string"
+          ],
+          "default": "150K",
+          "description": "The file size limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited file size. (Restart required)"
+        },
+        "php.excludeFiles": {
+          "type": [
+            "array"
+          ],
+          "default": [],
+          "description": "Files and folders that should be excluded from indexing. (Restart required)"
         }
       }
     }
