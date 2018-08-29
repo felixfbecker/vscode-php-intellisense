@@ -15,14 +15,11 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "typeRoots": [
-      "typings/modules",
-      "typings/globals"
-    ]
+    "allowUnusedLabels": false
 	},
 	"exclude": [
 		"node_modules",
-    "out"
+    "out",
+    "vendor"
 	]
 }

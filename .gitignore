@@ -1,5 +1,5 @@
-out/
 node_modules/
+out/
 vendor/
-composer.lock
-typings/
+.DS_Store
+package-lock.json

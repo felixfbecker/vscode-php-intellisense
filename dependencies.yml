@@ -1,0 +1,35 @@
+collectors:
+
+- type: js-npm
+  path: /
+  actors:
+  # pull requests for new major versions
+  - type: js-npm
+    versions: "Y.0.0"
+    settings:
+      # these updates should generally not have an effect on users
+      commit_message_prefix: "chore: "
+
+# receive pull requests to update composer.lock for any update to the language server or dependencies of it
+# after merging, depending on whether it was a patch or feature update,
+# semantic-release will bundle a new patch or feature version of the extension
+- type: php-composer
+  path: /
+  settings:
+    collect_transitive: true
+  actors:
+
+  - type: php-composer
+    versions: "L.L.Y"
+    settings:
+      commit_message_prefix: "fix: "
+
+  - type: php-composer
+    versions: "L.Y.0"
+    settings:
+      commit_message_prefix: "feat: "
+
+  - type: php-composer
+    versions: "Y.0.0"
+    settings:
+      commit_message_prefix: "chore: "
