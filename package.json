@@ -38,20 +38,34 @@
     "workspaceContains:**/*.php"
   ],
   "contributes": {
-		"configuration": {
-			"type": "object",
-			"title": "PHP IntelliSense",
-			"properties": {
-				"phpIntelliSense.fileTypes": {
-					"type": "array",
-					"default": [
-						".php"
-					],
-					"description": "An array of file types which should be indexed by the language server."
-				}
-			}
-		}
-	},
+    "configuration": {
+      "type": "object",
+      "title": "PHP IntelliSense",
+      "properties": {
+        "php.memoryLimit": {
+          "type": "string",
+          "default": "4095M",
+          "description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM (default is 4G).",
+          "pattern": "^\\d+[KMG]?$"
+        },
+        "php.executablePath": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "The path to a PHP 7+ executable."
+        },
+        "php.fileTypes": {
+          "type": [
+            "array"
+          ],
+          "default": [".php"],
+          "description": "List of file types that should be indexed by the php language server. (Restart required)"
+        }
+      }
+    }
+  },
   "main": "./out/extension",
   "scripts": {
     "build": "tsc -p .",
@@ -101,27 +115,5 @@
         "assets": "php-intellisense.vsix"
       }
     ]
-  },
-  "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "PHP IntelliSense",
-      "properties": {
-        "php.memoryLimit": {
-          "type": "string",
-          "default": "4095M",
-          "description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM (default is 4G).",
-          "pattern": "^\\d+[KMG]?$"
-        },
-        "php.executablePath": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "default": null,
-          "description": "The path to a PHP 7+ executable."
-        }
-      }
-    }
   }
 }

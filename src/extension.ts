@@ -108,7 +108,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
             configurationSection: 'php',
             // Notify the server about changes to PHP files in the workspace
             fileEvents: vscode.workspace.createFileSystemWatcher('**/*.php')
-        }
+        },
+        initializationOptions: conf
     };
 
     // Create the language client and start the client.
