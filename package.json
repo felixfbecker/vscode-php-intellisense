@@ -68,7 +68,8 @@
             "string"
           ],
           "default": "150K",
-          "description": "The file size limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited file size. (Restart required)"
+          "description": "The file size limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited file size. (Restart required)",
+          "pattern": "^\\d+[KMG]?$"
         },
         "php.excludeFiles": {
           "type": [
