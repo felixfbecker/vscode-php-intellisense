@@ -60,7 +60,9 @@
           "type": [
             "array"
           ],
-          "default": [".php"],
+          "default": [
+            ".php"
+          ],
           "description": "List of file types that should be indexed by the php language server. (Restart required)"
         },
         "php.fileSizeLimit": {
@@ -107,7 +109,7 @@
   "dependencies": {
     "mz": "^2.4.0",
     "semver": "^5.3.0",
-    "vscode-languageclient": "^3.0.3"
+    "vscode-languageclient": "^3.5.1"
   },
   "commitlint": {
     "extends": [
