@@ -37,6 +37,52 @@
     "onLanguage:php",
     "workspaceContains:**/*.php"
   ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "PHP IntelliSense",
+      "properties": {
+        "php.memoryLimit": {
+          "type": "string",
+          "default": "4095M",
+          "description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM (default is 4G).",
+          "pattern": "^\\d+[KMG]?$"
+        },
+        "php.executablePath": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "The path to a PHP 7+ executable."
+        },
+        "php.fileTypes": {
+          "type": [
+            "array"
+          ],
+          "default": [
+            ".php"
+          ],
+          "description": "List of file types that should be indexed by the php language server. (Restart required)"
+        },
+        "php.fileSizeLimit": {
+          "type": [
+            "string"
+          ],
+          "default": "150K",
+          "description": "The file size limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited file size. (Restart required)",
+          "pattern": "^\\d+[KMG]?$"
+        },
+        "php.excludeFiles": {
+          "type": [
+            "array"
+          ],
+          "default": [],
+          "description": "Files and folders that should be excluded from indexing. (Restart required)"
+        }
+      }
+    }
+  },
   "main": "./out/extension",
   "scripts": {
     "build": "tsc -p .",
@@ -63,7 +109,7 @@
   "dependencies": {
     "mz": "^2.4.0",
     "semver": "^5.3.0",
-    "vscode-languageclient": "^3.0.3"
+    "vscode-languageclient": "^3.5.1"
   },
   "commitlint": {
     "extends": [
@@ -86,27 +132,5 @@
         "assets": "php-intellisense.vsix"
       }
     ]
-  },
-  "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "PHP IntelliSense",
-      "properties": {
-        "php.memoryLimit": {
-          "type": "string",
-          "default": "4095M",
-          "description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM (default is 4G).",
-          "pattern": "^\\d+[KMG]?$"
-        },
-        "php.executablePath": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "default": null,
-          "description": "The path to a PHP 7+ executable."
-        }
-      }
-    }
   }
 }
