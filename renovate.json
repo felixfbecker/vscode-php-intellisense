@@ -1,0 +1,27 @@
+{
+  "extends": ["config:base", ":maintainLockFilesMonthly"],
+  "prCreation": "not-pending",
+  "rangeStrategy": "pin",
+  "semanticCommits": true,
+  "npm": {
+    "semanticCommitType": "chore"
+  },
+  "composer": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "packagePatterns": ["^@types/"],
+      "automerge": true
+    },
+    {
+      "packageNames": ["felixfbecker/language-server"],
+      "minor": {
+        "semanticCommitType": "feat"
+      },
+      "patch": {
+        "semanticCommitType": "fix"
+      }
+    }
+  ]
+}
