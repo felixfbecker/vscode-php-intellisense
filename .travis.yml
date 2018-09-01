@@ -39,3 +39,4 @@ stages:
 branches:
   only:
     - master
+    - /^renovate\/.+/
