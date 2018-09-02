@@ -9,7 +9,7 @@
   "preview": false,
   "version": "1.5.4",
   "engines": {
-    "vscode": "^1.17.1"
+    "vscode": "^1.26.1"
   },
   "keywords": [
     "php",
@@ -63,7 +63,7 @@
   "dependencies": {
     "mz": "2.7.0",
     "semver": "5.5.1",
-    "vscode-languageclient": "3.5.1"
+    "vscode-languageclient": "5.0.1"
   },
   "commitlint": {
     "extends": [
