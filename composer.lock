@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "59363482d333a66c4380ed5e00f8fe43",
@@ -52,16 +52,16 @@
         },
         {
             "name": "felixfbecker/advanced-json-rpc",
-            "version": "v3.0.1",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/felixfbecker/php-advanced-json-rpc.git",
-                "reference": "29f1d8c2c17f8c04f9768d382b72aeeb0715ebb8"
+                "reference": "241c470695366e7b83672be04ea0e64d8085a551"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/felixfbecker/php-advanced-json-rpc/zipball/29f1d8c2c17f8c04f9768d382b72aeeb0715ebb8",
-                "reference": "29f1d8c2c17f8c04f9768d382b72aeeb0715ebb8",
+                "url": "https://api.github.com/repos/felixfbecker/php-advanced-json-rpc/zipball/241c470695366e7b83672be04ea0e64d8085a551",
+                "reference": "241c470695366e7b83672be04ea0e64d8085a551",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 }
             ],
             "description": "A more advanced JSONRPC implementation",
-            "time": "2017-10-28T21:26:16+00:00"
+            "time": "2018-09-10T08:58:41+00:00"
         },
         {
             "name": "felixfbecker/language-server",
