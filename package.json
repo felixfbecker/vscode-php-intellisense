@@ -53,7 +53,7 @@
     "@types/mz": "0.0.32",
     "@types/node": "8.10.29",
     "@types/semver": "5.5.0",
-    "husky": "0.14.3",
+    "husky": "1.0.0",
     "semantic-release": "15.9.12",
     "semantic-release-vsce": "2.1.2",
     "tslint": "5.11.0",
