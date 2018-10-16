@@ -63,7 +63,7 @@
   "dependencies": {
     "mz": "2.7.0",
     "semver": "5.5.1",
-    "vscode-languageclient": "5.0.1"
+    "vscode-languageclient": "5.1.1"
   },
   "commitlint": {
     "extends": [
