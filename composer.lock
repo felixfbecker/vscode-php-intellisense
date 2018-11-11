@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b07f5e19ede280b0df151c2408e340c",
+    "content-hash": "73069f86f7f447e5ac0e50d855fafe99",
     "packages": [
         {
             "name": "composer/xdebug-handler",
@@ -93,16 +93,16 @@
         },
         {
             "name": "felixfbecker/language-server",
-            "version": "v5.4.3",
+            "version": "v5.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/felixfbecker/php-language-server.git",
-                "reference": "24388bcf26d6e088b132904ab81f02a4df813212"
+                "reference": "b1cc565d7e99ce5df9a4fc6d0f05fc69c50de2fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/felixfbecker/php-language-server/zipball/24388bcf26d6e088b132904ab81f02a4df813212",
-                "reference": "24388bcf26d6e088b132904ab81f02a4df813212",
+                "url": "https://api.github.com/repos/felixfbecker/php-language-server/zipball/b1cc565d7e99ce5df9a4fc6d0f05fc69c50de2fb",
+                "reference": "b1cc565d7e99ce5df9a4fc6d0f05fc69c50de2fb",
                 "shasum": ""
             },
             "require": {
@@ -161,7 +161,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2018-11-11T02:47:57+00:00"
+            "time": "2018-11-11T11:57:20+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
