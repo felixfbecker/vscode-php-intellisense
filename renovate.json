@@ -28,6 +28,7 @@
     },
     {
       "packageNames": ["felixfbecker/language-server"],
+      "schedule": [],
       "minor": {
         "semanticCommitType": "feat"
       },
