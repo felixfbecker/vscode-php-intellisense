@@ -1,16 +1,19 @@
 
 import * as path from 'path';
-import { spawn, execFile, ChildProcess } from 'mz/child_process';
+import { spawn, ChildProcess } from 'mz/child_process';
 import * as vscode from 'vscode';
 import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient';
 import * as semver from 'semver';
 import * as net from 'net';
 import * as url from 'url';
+import execa from 'execa';
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
 
     const conf = vscode.workspace.getConfiguration('php');
-    const executablePath = conf.get<string>('executablePath') || 'php';
+    const executablePath = conf.get<string>('executablePath') ||
+        conf.get<string>('validate.executablePath') ||
+        (process.platform === 'win32' ? 'php.exe' : 'php');
 
     const memoryLimit = conf.get<string>('memoryLimit') || '4095M';
 
@@ -28,7 +31,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     // Check path (if PHP is available and version is ^7.0.0)
     let stdout: string;
     try {
-        [stdout] = await execFile(executablePath, ['--version']);
+        stdout = await execa.stdout(executablePath, ['--version']);
     } catch (err) {
         if (err.code === 'ENOENT') {
             const selected = await vscode.window.showErrorMessage(

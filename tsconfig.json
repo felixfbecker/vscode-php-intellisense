@@ -4,6 +4,7 @@
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"outDir": "out",
+    "esModuleInterop": true,
 		"lib": [
       "es6"
     ],
