@@ -1,15 +1,13 @@
 {
-	"compilerOptions": {
-		"target": "ES6",
-		"module": "commonjs",
-		"moduleResolution": "node",
-		"outDir": "out",
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "out",
     "esModuleInterop": true,
-		"lib": [
-      "es6"
-    ],
+    "lib": ["es6"],
     "noImplicitAny": true,
-		"sourceMap": true,
+    "sourceMap": true,
     "rootDir": "src",
     "strictNullChecks": true,
     "noImplicitThis": true,
@@ -17,10 +15,6 @@
     "noUnusedLocals": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false
-	},
-	"exclude": [
-		"node_modules",
-    "out",
-    "vendor"
-	]
+  },
+  "exclude": ["node_modules", "out", "vendor"]
 }

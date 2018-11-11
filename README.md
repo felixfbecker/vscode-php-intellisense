@@ -15,50 +15,63 @@ I recommend to disable VS Code's built-in PHP IntelliSense by setting `php.sugge
 ## Features
 
 ### Completion
+
 ![Completion search demo](images/completion.gif)
 
 ### Signature Help
+
 ![Signature help demo](images/signatureHelp.gif)
 
 ### Workspace symbol search
+
 ![Workspace symbol search demo](images/workspaceSymbol.gif)
 
 ### Find all References
+
 ![Find References demo](images/references.png)
 
 ### Go to Definition
+
 ![Go To Definition demo](images/definition.gif)
 
 ### Hover
+
 ![Hover class demo](images/hoverClass.png)
 
 ![Hover parameter demo](images/hoverParam.png)
 
 ### Find all symbols
+
 ![Find all symbols demo](images/documentSymbol.gif)
 
 ### Column-accurate error reporting
+
 ![Error reporting demo](images/publishDiagnostics.png)
 
 ### Code style linting
+
 Please use a dedicated extension like [PHP CodeSniffer](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs).
 
 ### Format code
+
 Please use a dedicated extension like [PHP CS Fixer](https://marketplace.visualstudio.com/items?itemName=junstyle.php-cs-fixer).
 
 ## Todo
- - Rename
- - Signature help
+
+- Rename
+- Signature help
 
 ## Contributing
 
 Clone whole repository and in root directory execute:
+
 ```bash
 composer install
 npm install
 npm run build
 code .
 ```
+
 The last command will open the folder in VS Code. Hit `F5` to launch an Extension Development Host with the extension.
 For working on the language server, the easiest way is to replace the language server installation from composer in `vendor/felixfbecker/language-server` with a symlink to your local clone.
 

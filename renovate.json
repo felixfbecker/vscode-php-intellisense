@@ -4,12 +4,10 @@
   "rangeStrategy": "pin",
   "semanticCommits": true,
   "npm": {
-    "semanticCommitType": "chore",
     "packageRules": [
       {
-        "packagePatterns": [
-          "*"
-        ],
+        "packagePatterns": ["*"],
+        "semanticCommitType": "chore",
         "minor": {
           "groupName": "all non-major dependencies",
           "groupSlug": "all-minor-patch"
