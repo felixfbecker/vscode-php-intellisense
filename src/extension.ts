@@ -61,6 +61,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         return;
     }
 
+    let client: LanguageClient;
+
     const serverOptions = () => new Promise<ChildProcess | StreamInfo>((resolve, reject) => {
         // Use a TCP socket because of problems with blocking STDIO
         const server = net.createServer(socket => {
@@ -81,10 +83,18 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
                 '--memory-limit=' + memoryLimit
             ]);
             childProcess.stderr.on('data', (chunk: Buffer) => {
-                console.error(chunk + '');
+                const str = chunk.toString();
+                console.log('PHP Language Server:', str);
+                client.outputChannel.appendLine(str);
             });
-            childProcess.stdout.on('data', (chunk: Buffer) => {
-                console.log(chunk + '');
+            // childProcess.stdout.on('data', (chunk: Buffer) => {
+            //     console.log('PHP Language Server:', chunk + '');
+            // });
+            childProcess.on('exit', (code, signal) => {
+                client.outputChannel.appendLine(`Language server exited ` + (signal ? `from signal ${signal}` : `with exit code ${code}`));
+                if (code !== 0) {
+                    client.outputChannel.show();
+                }
             });
             return childProcess;
         });
@@ -112,7 +122,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     };
 
     // Create the language client and start the client.
-    const disposable = new LanguageClient('PHP Language Server', serverOptions, clientOptions).start();
+    client = new LanguageClient('PHP Language Server', serverOptions, clientOptions);
+    const disposable = client.start();
 
     // Push the disposable to the context's subscriptions so that the
     // client can be deactivated on extension deactivation
