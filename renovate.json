@@ -27,12 +27,14 @@
     {
       "packageNames": ["felixfbecker/language-server"],
       "schedule": [],
-      "minor": {
-        "semanticCommitType": "feat"
-      },
-      "patch": {
-        "semanticCommitType": "fix"
-      }
+      "updateTypes": ["minor"],
+      "semanticCommitType": "feat"
+    },
+    {
+      "packageNames": ["felixfbecker/language-server"],
+      "schedule": [],
+      "updateTypes": ["patch"],
+      "semanticCommitType": "fix"
     }
   ]
 }
