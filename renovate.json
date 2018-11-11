@@ -4,7 +4,18 @@
   "rangeStrategy": "pin",
   "semanticCommits": true,
   "npm": {
-    "semanticCommitType": "chore"
+    "semanticCommitType": "chore",
+    "packageRules": [
+      {
+        "packagePatterns": [
+          "*"
+        ],
+        "minor": {
+          "groupName": "all non-major dependencies",
+          "groupSlug": "all-minor-patch"
+        }
+      }
+    ]
   },
   "composer": {
     "enabled": true,
