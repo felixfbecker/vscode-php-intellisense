@@ -15,6 +15,7 @@
       }
     ]
   },
+  "separateMinorPatch": true,
   "composer": {
     "enabled": true,
     "rollbackPrs": false
