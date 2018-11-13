@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73069f86f7f447e5ac0e50d855fafe99",
+    "content-hash": "39802487ae11be58ce180eb941724a47",
     "packages": [
         {
             "name": "composer/xdebug-handler",
@@ -93,16 +93,16 @@
         },
         {
             "name": "felixfbecker/language-server",
-            "version": "v5.4.5",
+            "version": "v5.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/felixfbecker/php-language-server.git",
-                "reference": "b1cc565d7e99ce5df9a4fc6d0f05fc69c50de2fb"
+                "reference": "1da3328bc23ebd6418529035d357481c8c028640"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/felixfbecker/php-language-server/zipball/b1cc565d7e99ce5df9a4fc6d0f05fc69c50de2fb",
-                "reference": "b1cc565d7e99ce5df9a4fc6d0f05fc69c50de2fb",
+                "url": "https://api.github.com/repos/felixfbecker/php-language-server/zipball/1da3328bc23ebd6418529035d357481c8c028640",
+                "reference": "1da3328bc23ebd6418529035d357481c8c028640",
                 "shasum": ""
             },
             "require": {
@@ -161,7 +161,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2018-11-11T11:57:20+00:00"
+            "time": "2018-11-13T17:33:21+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
@@ -216,12 +216,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "3fb72fa614ef475d7ffb1369866cbaa371ca18eb"
+                "reference": "a9e42cb008fa037dee6a4a9eda5296d2436c2ea4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/3fb72fa614ef475d7ffb1369866cbaa371ca18eb",
-                "reference": "3fb72fa614ef475d7ffb1369866cbaa371ca18eb",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/a9e42cb008fa037dee6a4a9eda5296d2436c2ea4",
+                "reference": "a9e42cb008fa037dee6a4a9eda5296d2436c2ea4",
                 "shasum": ""
             },
             "require-dev": {
@@ -246,7 +246,7 @@
                 "stubs",
                 "type"
             ],
-            "time": "2018-11-01T14:35:24+00:00"
+            "time": "2018-11-13T11:32:33+00:00"
         },
         {
             "name": "microsoft/tolerant-php-parser",
