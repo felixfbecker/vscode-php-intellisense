@@ -27,10 +27,13 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         return
     }
 
+    // Support for PHP version managers: Execute the PHP process inside the project folder
+    const execOptions = { cwd: vscode.workspace.rootPath }
+
     // Check path (if PHP is available and version is ^7.0.0)
     let stdout: string
     try {
-        stdout = await execa.stdout(executablePath, ['--version'])
+        stdout = await execa.stdout(executablePath, ['--version'], execOptions)
     } catch (err) {
         if (err.code === 'ENOENT') {
             const selected = await vscode.window.showErrorMessage(
@@ -80,13 +83,17 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
             // Listen on random port
             server.listen(0, '127.0.0.1', () => {
                 // The server is implemented in PHP
-                const childProcess = spawn(executablePath, [
-                    context.asAbsolutePath(
-                        path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php')
-                    ),
-                    '--tcp=127.0.0.1:' + server.address().port,
-                    '--memory-limit=' + memoryLimit,
-                ])
+                const childProcess = spawn(
+                    executablePath,
+                    [
+                        context.asAbsolutePath(
+                            path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php')
+                        ),
+                        '--tcp=127.0.0.1:' + server.address().port,
+                        '--memory-limit=' + memoryLimit,
+                    ],
+                    execOptions
+                )
                 childProcess.stderr.on('data', (chunk: Buffer) => {
                     const str = chunk.toString()
                     console.log('PHP Language Server:', str)
