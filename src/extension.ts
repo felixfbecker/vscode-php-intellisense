@@ -63,6 +63,19 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         return
     }
 
+    // Get excludes from workspace configuration: files.exclude
+    const exclude: string[] = [];
+    const filesConfig = vscode.workspace.getConfiguration('files');
+    const _exclude = filesConfig.get<{[key: string]: boolean}>('exclude', {});
+    for (const key in _exclude) {
+        if (_exclude.hasOwnProperty(key) && _exclude[key]) {
+            // Push the exclude pattern to the array. Note that we want to
+            // match the files under the excluded directory not the
+            // directory itself.
+            exclude.push(key + '/**');
+        }
+    }
+
     let client: LanguageClient
 
     const serverOptions = () =>
@@ -122,6 +135,9 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
             configurationSection: 'php',
             // Notify the server about changes to PHP files in the workspace
             fileEvents: vscode.workspace.createFileSystemWatcher('**/*.php'),
+        },
+        initializationOptions: {
+            exclude,
         },
     }
 
