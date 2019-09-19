@@ -5,6 +5,7 @@ images/**
 out/test/**
 src/**
 vendor/jetbrains/phpstorm-stubs/**
+!vendor/jetbrains/phpstorm-stubs/PhpStormStubsMap.php
 vendor/bin/**
 **/.DS_Store
 **/.editorconfig
