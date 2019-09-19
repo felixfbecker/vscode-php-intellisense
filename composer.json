@@ -1,6 +1,11 @@
 {
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "config": {
+        "platform": {
+            "php": "7.0.25"
+        }
+    },
     "require": {
         "felixfbecker/language-server": "5.4.6"
     },
