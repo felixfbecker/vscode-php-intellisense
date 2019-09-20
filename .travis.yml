@@ -1,7 +1,7 @@
 language: php
 
 php:
-  - '7.0'
+  - '7.1'
 
 cache:
   directories:
@@ -23,7 +23,7 @@ jobs:
   include:
     - stage: test
     - stage: release
-      php: '7.0'
+      php: '7.1'
       install:
         - npm install
         - composer install --prefer-dist --no-interaction --optimize-autoloader

@@ -6,6 +6,7 @@ import * as semver from 'semver'
 import * as url from 'url'
 import * as vscode from 'vscode'
 import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient'
+const composerJson = require('../composer.json')
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
     const conf = vscode.workspace.getConfiguration('php')
@@ -58,8 +59,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     if (!/^\d+.\d+.\d+$/.test(version)) {
         version = version.replace(/(\d+.\d+.\d+)/, '$1-')
     }
-    if (semver.lt(version, '7.0.0')) {
-        vscode.window.showErrorMessage('The language server needs at least PHP 7 installed. Version found: ' + version)
+    if (semver.lt(version, composerJson.config.platform.php)) {
+        vscode.window.showErrorMessage('The language server needs at least PHP 7.1 installed. Version found: ' + version)
         return
     }
 
