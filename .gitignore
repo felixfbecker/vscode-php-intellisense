@@ -2,4 +2,3 @@ node_modules/
 out/
 vendor/
 .DS_Store
-package-lock.json
