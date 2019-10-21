@@ -5,7 +5,7 @@ import * as path from 'path'
 import * as semver from 'semver'
 import * as url from 'url'
 import * as vscode from 'vscode'
-import { LanguageClient, LanguageClientOptions, StreamInfo, RevealOutputChannelOn } from 'vscode-languageclient'
+import { LanguageClient, LanguageClientOptions, RevealOutputChannelOn, StreamInfo } from 'vscode-languageclient'
 const composerJson = require('../composer.json')
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
