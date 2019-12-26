@@ -5,7 +5,7 @@ import * as path from 'path'
 import * as semver from 'semver'
 import * as url from 'url'
 import * as vscode from 'vscode'
-import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient'
+import { LanguageClient, LanguageClientOptions, RevealOutputChannelOn, StreamInfo } from 'vscode-languageclient'
 const composerJson = require('../composer.json')
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
@@ -112,6 +112,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     const clientOptions: LanguageClientOptions = {
         // Register the server for php documents
         documentSelector: [{ scheme: 'file', language: 'php' }, { scheme: 'untitled', language: 'php' }],
+        revealOutputChannelOn: RevealOutputChannelOn.Never,
         uriConverters: {
             // VS Code by default %-encodes even the colon after the drive letter
             // NodeJS handles it much better
