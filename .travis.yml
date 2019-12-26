@@ -9,8 +9,8 @@ cache:
     - $HOME/.composer/cache
 
 before_install:
-  - nvm install 8
-  - nvm use 8
+  - nvm install '12.4.0'
+  - nvm use '12.4.0'
 
 install:
   - npm ci
