@@ -128,7 +128,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     }
 
     // Create the language client and start the client.
-    client = new LanguageClient('PHP Language Server', serverOptions, clientOptions)
+    client = new LanguageClient('php', 'Language Support for PHP', serverOptions, clientOptions)
     const disposable = client.start()
 
     // Push the disposable to the context's subscriptions so that the
