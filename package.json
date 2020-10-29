@@ -70,7 +70,7 @@
     "vscode": "1.1.21"
   },
   "dependencies": {
-    "execa": "1.0.0",
+    "execa": "4.1.0",
     "mz": "2.7.0",
     "semver": "6.3.0",
     "vscode-languageclient": "5.1.1"
