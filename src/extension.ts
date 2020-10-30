@@ -31,7 +31,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     // Check path (if PHP is available and version is ^7.0.0)
     let stdout: string
     try {
-        stdout = await execa.stdout(executablePath, ['--version'],{preferLocal: false})
+        stdout = await execa.stdout(executablePath, ['--version'], {preferLocal: false})
     } catch (err) {
         if (err.code === 'ENOENT') {
             const selected = await vscode.window.showErrorMessage(
