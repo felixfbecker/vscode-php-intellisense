@@ -106,7 +106,7 @@
           "type": "string",
           "default": "4095M",
           "description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM (default is 4G).",
-          "pattern": "^\\d+[KMG]?$"
+          "pattern": "^(-1|\\d+[KMG]?)$"
         },
         "php.executablePath": {
           "type": [
