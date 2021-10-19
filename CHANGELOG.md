@@ -1,1 +1,1 @@
-# See [GitHub releases](https://github.com/felixfbecker/vscode-php-intellisense/releases)
+# See [GitHub releases](https://github.com/zobo/vscode-php-intellisense/releases)

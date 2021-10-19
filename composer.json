@@ -3,11 +3,17 @@
     "prefer-stable": true,
     "config": {
         "platform": {
-            "php": "7.1.0"
+            "php": "7.2.0"
         }
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/zobo/php-language-server"
+        }
+    ],
     "require": {
-        "felixfbecker/language-server": "5.4.6"
+        "felixfbecker/language-server": "dev-main as 1.0.0"
     },
     "scripts": {
         "parse-stubs": "LanguageServer\\ComposerScripts::parseStubs",

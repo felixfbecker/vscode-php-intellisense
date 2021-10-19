@@ -31,7 +31,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     // Check path (if PHP is available and version is ^7.0.0)
     let stdout: string
     try {
-        stdout = await execa.stdout(executablePath, ['--version'])
+        stdout = await execa.stdout(executablePath, ['--version'], { preferLocal: false })
     } catch (err) {
         if (err.code === 'ENOENT') {
             const selected = await vscode.window.showErrorMessage(
@@ -60,7 +60,9 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         version = version.replace(/(\d+.\d+.\d+)/, '$1-')
     }
     if (semver.lt(version, composerJson.config.platform.php)) {
-        vscode.window.showErrorMessage('The language server needs at least PHP 7.1 installed. Version found: ' + version)
+        vscode.window.showErrorMessage(
+            'The language server needs at least PHP 7.1 installed. Version found: ' + version
+        )
         return
     }
 
@@ -128,7 +130,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     }
 
     // Create the language client and start the client.
-    client = new LanguageClient('PHP Language Server', serverOptions, clientOptions)
+    client = new LanguageClient('php-intellisense', 'PHP Language Server', serverOptions, clientOptions)
     const disposable = client.start()
 
     // Push the disposable to the context's subscriptions so that the
