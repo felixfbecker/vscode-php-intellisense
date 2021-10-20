@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f256ab46cacfe286e5e6a5fe03a20045",
+    "content-hash": "18af9b535f478b2503b62f350013243d",
     "packages": [
         {
             "name": "composer/xdebug-handler",
@@ -121,7 +121,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "a57e6be201aeffe0f2fdd339417eb262fdef6cd1"
+                "reference": "20282d1159a7df9c0469289f6ed25ad546574d4c"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
@@ -135,12 +135,12 @@
                 "psr/log": "^1.0",
                 "sabre/event": "^5.0",
                 "sabre/uri": "^2.0",
-                "webmozart/glob": "^4.1",
+                "webmozart/glob": "^4.4",
                 "webmozart/path-util": "^2.3"
             },
             "require-dev": {
                 "phan/phan": "^3.2",
-                "phpunit/phpunit": "^6.5",
+                "phpunit/phpunit": "^9.0",
                 "squizlabs/php_codesniffer": "^3.6"
             },
             "bin": [
@@ -201,7 +201,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2021-10-19T22:17:47+00:00"
+            "time": "2021-10-20T20:52:08+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",

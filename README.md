@@ -12,7 +12,7 @@ Advanced PHP IntelliSense for Visual Studio Code.
 
 You need at least PHP 7.4 installed for the extension to work. You can either add it to your PATH or set the `php.executablePath` setting.
 
-**Node: PHP 8.0 does work, PHP 8.1 support is work in progress.**
+**Note: PHP 8.0 does work, PHP 8.1 support is work in progress.**
 
 I recommend to disable VS Code's built-in PHP IntelliSense by setting `php.suggest.basic` to `false` to avoid duplicate suggestions.
 
