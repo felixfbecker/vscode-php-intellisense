@@ -5,13 +5,29 @@
   "tasks": [
     {
       "type": "npm",
+      "script": "watch",
+      "problemMatcher": ["$tsc-watch"],
+      "isBackground": true,
+      "label": "npm: watch",
+      "detail": "tsc -w -p .",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "npm: build",
+      "type": "npm",
       "script": "build",
-      "problemMatcher": ["$tsc"]
+      "problemMatcher": ["$tsc"],
+      "isBackground": false
     },
     {
       "type": "npm",
-      "script": "watch",
-      "problemMatcher": ["$tsc-watch"]
+      "script": "lint",
+      "problemMatcher": ["$eslint-stylish"],
+      "label": "npm: lint",
+      "detail": "npm run tslint && npm run prettier"
     }
   ]
 }
