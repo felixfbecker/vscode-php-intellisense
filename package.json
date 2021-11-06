@@ -93,6 +93,16 @@
       }
     ]
   },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "Workspace level overrides to php.executablePath and php.memoryLimit cannot be provided until workspace is trusted.",
+      "restrictedConfigurations": [
+        "php.executablePath",
+        "php.memoryLimit"
+      ]
+    }
+  },
   "contributes": {
     "configuration": {
       "type": "object",
