@@ -48,16 +48,20 @@
   },
   "packageRules": [
     {
-      "packageNames": ["php"],
+      "matchPackageNames": ["php"],
       "extractVersion": "^php-(?<version>.*)$"
     },
     {
-      "packageNames": ["node"],
+      "matchPackageNames": ["node"],
       "extractVersion": "^v(?<version>.*)$",
       "commitMessageTopic": "Node.js",
       "major": {
         "enabled": true
       }
+    },
+    {
+      "matchPackageNames": ["vscode"],
+      "allowedVersions": "!/^1\\.999\\.0$/"
     }
   ]
 }
