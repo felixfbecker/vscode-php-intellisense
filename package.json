@@ -9,7 +9,7 @@
   "preview": false,
   "version": "1.0.0",
   "engines": {
-    "vscode": "^1.53.2",
+    "vscode": "^1.63.2",
     "node": "^16.13.1"
   },
   "keywords": [
@@ -56,7 +56,7 @@
     "@types/mocha": "9.0.0",
     "@types/node": "^16.11.18",
     "@types/semver": "^7.3.9",
-    "@types/vscode": "^1.53.0",
+    "@types/vscode": "^1.63.1",
     "prettier": "^2.5.1",
     "semantic-release": "^18.0.1",
     "semantic-release-vsce": "^3.5.0",
