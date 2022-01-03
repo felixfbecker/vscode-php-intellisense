@@ -35,7 +35,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     } catch (err) {
         if (err.code === 'ENOENT') {
             const selected = await vscode.window.showErrorMessage(
-                'PHP executable not found. Install PHP 7 and add it to your PATH or set the php.executablePath setting',
+                `PHP executable not found. Install PHP ${composerJson.config.platform.php} or higher and add it to your PATH or set the php.executablePath setting`,
                 'Open settings'
             )
             if (selected === 'Open settings') {
@@ -61,7 +61,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     }
     if (semver.lt(version, composerJson.config.platform.php)) {
         vscode.window.showErrorMessage(
-            'The language server needs at least PHP 7.1 installed. Version found: ' + version
+            `The language server needs at least PHP ${composerJson.config.platform.php} installed. Version found: ${version}`
         )
         return
     }
