@@ -143,6 +143,7 @@
                 "phpunit/phpunit": "^9.0",
                 "squizlabs/php_codesniffer": "^3.6"
             },
+            "default-branch": true,
             "bin": [
                 "bin/php-language-server.php"
             ],
@@ -996,5 +997,5 @@
     "platform-overrides": {
         "php": "7.4.0"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
