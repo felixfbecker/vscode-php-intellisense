@@ -9,7 +9,7 @@
   "preview": false,
   "version": "1.0.0",
   "engines": {
-    "vscode": "^1.53.0",
+    "vscode": "^1.53.2",
     "node": "^16.13.1"
   },
   "keywords": [
