@@ -1,8 +1,34 @@
 {
   "extends": ["config:base", ":maintainLockFilesMonthly"],
   "prCreation": "not-pending",
-  "rangeStrategy": "pin",
+  "rangeStrategy": "bump",
   "semanticCommits": true,
+  "masterIssue": true,
+  "prHourlyLimit": 0,
+  "node": {
+    "supportPolicy": ["current"],
+    "major": {
+      "enabled": true
+    }
+  },
+  "regexManagers": [
+    {
+      "fileMatch": ["^.github/workflows/.+\\.ya?ml$"],
+      "matchStrings": ["php: '(?<currentValue>[^']+)'.*# renovate:keep-up-to-date"],
+      "depNameTemplate": "php",
+      "lookupNameTemplate": "php/php-src",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<prerelease>\\w+)?$"
+    },
+    {
+      "fileMatch": ["^.github/workflows/.+\\.ya?ml$"],
+      "matchStrings": ["node-version: '(?<currentValue>[^']+)'.*# renovate:keep-up-to-date"],
+      "depNameTemplate": "node",
+      "lookupNameTemplate": "nodejs/node",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "node"
+    }
+  ],
   "npm": {
     "packageRules": [
       {
@@ -22,20 +48,16 @@
   },
   "packageRules": [
     {
-      "packagePatterns": ["^@types/"],
-      "automerge": true
+      "packageNames": ["php"],
+      "extractVersion": "^php-(?<version>.*)$"
     },
     {
-      "packageNames": ["felixfbecker/language-server"],
-      "schedule": [],
-      "updateTypes": ["minor"],
-      "semanticCommitType": "feat"
-    },
-    {
-      "packageNames": ["felixfbecker/language-server"],
-      "schedule": [],
-      "updateTypes": ["patch"],
-      "semanticCommitType": "fix"
+      "packageNames": ["node"],
+      "extractVersion": "^v(?<version>.*)$",
+      "commitMessageTopic": "Node.js",
+      "major": {
+        "enabled": true
+      }
     }
   ]
 }
