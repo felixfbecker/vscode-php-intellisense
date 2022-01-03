@@ -1,5 +1,5 @@
+import { ChildProcess, spawn } from 'child_process'
 import execa from 'execa'
-import { ChildProcess, spawn } from 'mz/child_process'
 import * as net from 'net'
 import * as path from 'path'
 import * as semver from 'semver'
