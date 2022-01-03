@@ -121,7 +121,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "c633a9792197fde1e797861fbd348a220ca0dd50"
+                "reference": "3b67cbb959f0e0cacf91d9985945c2b2039df5d1"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
@@ -201,7 +201,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2021-11-05T20:19:12+00:00"
+            "time": "2022-01-03T17:27:41+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
@@ -265,16 +265,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "fdcc30312221ce08f3a4413588e2df4b77f843fc"
+                "reference": "b84793775b18b09eb13779e8fc29ff2419450e30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/fdcc30312221ce08f3a4413588e2df4b77f843fc",
-                "reference": "fdcc30312221ce08f3a4413588e2df4b77f843fc",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/b84793775b18b09eb13779e8fc29ff2419450e30",
+                "reference": "b84793775b18b09eb13779e8fc29ff2419450e30",
                 "shasum": ""
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "dev-master",
+                "friendsofphp/php-cs-fixer": "@stable",
                 "nikic/php-parser": "@stable",
                 "php": "^8.0",
                 "phpdocumentor/reflection-docblock": "@stable",
@@ -306,7 +306,7 @@
             "support": {
                 "source": "https://github.com/JetBrains/phpstorm-stubs/tree/master"
             },
-            "time": "2021-11-04T13:27:30+00:00"
+            "time": "2021-12-31T12:50:10+00:00"
         },
         {
             "name": "microsoft/tolerant-php-parser",
@@ -972,6 +972,7 @@
                 "issues": "https://github.com/webmozart/path-util/issues",
                 "source": "https://github.com/webmozart/path-util/tree/2.3.0"
             },
+            "abandoned": "symfony/filesystem",
             "time": "2015-12-17T08:42:14+00:00"
         }
     ],

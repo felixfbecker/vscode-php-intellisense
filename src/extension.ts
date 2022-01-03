@@ -5,7 +5,7 @@ import * as path from 'path'
 import * as semver from 'semver'
 import * as url from 'url'
 import * as vscode from 'vscode'
-import { LanguageClient, LanguageClientOptions, RevealOutputChannelOn, StreamInfo } from 'vscode-languageclient'
+import { LanguageClient, LanguageClientOptions, RevealOutputChannelOn, StreamInfo } from 'vscode-languageclient/node'
 const composerJson = require('../composer.json')
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
@@ -71,7 +71,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     const serverOptions = () =>
         new Promise<ChildProcess | StreamInfo>((resolve, reject) => {
             // Use a TCP socket because of problems with blocking STDIO
-            const server = net.createServer(socket => {
+            const server = net.createServer((socket) => {
                 // 'connection' listener
                 console.log('PHP process connected')
                 socket.on('end', () => {
@@ -87,7 +87,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
                     context.asAbsolutePath(
                         path.join('vendor', 'felixfbecker', 'language-server', 'bin', 'php-language-server.php')
                     ),
-                    '--tcp=127.0.0.1:' + server.address().port,
+                    '--tcp=127.0.0.1:' + (server.address()! as net.AddressInfo).port,
                     '--memory-limit=' + memoryLimit,
                 ])
                 childProcess.stderr.on('data', (chunk: Buffer) => {
@@ -113,13 +113,16 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     // Options to control the language client
     const clientOptions: LanguageClientOptions = {
         // Register the server for php documents
-        documentSelector: [{ scheme: 'file', language: 'php' }, { scheme: 'untitled', language: 'php' }],
+        documentSelector: [
+            { scheme: 'file', language: 'php' },
+            { scheme: 'untitled', language: 'php' },
+        ],
         revealOutputChannelOn: RevealOutputChannelOn.Never,
         uriConverters: {
             // VS Code by default %-encodes even the colon after the drive letter
             // NodeJS handles it much better
-            code2Protocol: uri => url.format(url.parse(uri.toString(true))),
-            protocol2Code: str => vscode.Uri.parse(str),
+            code2Protocol: (uri) => url.format(url.parse(uri.toString(true))),
+            protocol2Code: (str) => vscode.Uri.parse(str),
         },
         synchronize: {
             // Synchronize the setting section 'php' to the server

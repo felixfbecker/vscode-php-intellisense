@@ -21,3 +21,4 @@ vendor/bin/**
 **/phpunit.xml.dist
 **/tsconfig.json
 **/tslint.json
+setup.bat
