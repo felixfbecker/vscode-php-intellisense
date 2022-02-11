@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18af9b535f478b2503b62f350013243d",
+    "content-hash": "ec853e704b7c8812c606c78e3bcab626",
     "packages": [
         {
             "name": "composer/xdebug-handler",
@@ -121,16 +121,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "3b67cbb959f0e0cacf91d9985945c2b2039df5d1"
+                "reference": "5273c08fa45a29e5fe629f91384ece1fa8e02712"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
                 "felixfbecker/advanced-json-rpc": "^3.0.0",
-                "felixfbecker/language-server-protocol": "^1.0.1",
+                "felixfbecker/language-server-protocol": "dev-main",
                 "jetbrains/phpstorm-stubs": "dev-master",
                 "microsoft/tolerant-php-parser": "^0.1.1",
                 "netresearch/jsonmapper": "^1.0",
-                "php": "^7.0",
+                "php": ">=7.4",
                 "phpdocumentor/reflection-docblock": "^5.2.2",
                 "psr/log": "^1.0",
                 "sabre/event": "^5.0",
@@ -202,21 +202,15 @@
                 "studio",
                 "visual"
             ],
-            "time": "2022-01-03T17:27:41+00:00"
+            "time": "2022-02-11T05:46:26+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
-            "version": "1.5.1",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/felixfbecker/php-language-server-protocol.git",
-                "reference": "9d846d1f5cf101deee7a61c8ba7caa0a975cd730"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/felixfbecker/php-language-server-protocol/zipball/9d846d1f5cf101deee7a61c8ba7caa0a975cd730",
-                "reference": "9d846d1f5cf101deee7a61c8ba7caa0a975cd730",
-                "shasum": ""
+                "url": "https://github.com/zobo/php-language-server-protocol",
+                "reference": "2729ed1caa8456752f6480efc1d670565307b744"
             },
             "require": {
                 "php": ">=7.1"
@@ -226,10 +220,12 @@
                 "squizlabs/php_codesniffer": "^3.1",
                 "vimeo/psalm": "^4.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-main": "1.x-dev",
+                    "dev-feature/spec-3.16-zobo": "1.x-dev"
                 }
             },
             "autoload": {
@@ -237,7 +233,20 @@
                     "LanguageServerProtocol\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "phpstan": [
+                    "phpstan analyse -c phpstan.neon --ansi --level=7 -vvv src"
+                ],
+                "psalm": [
+                    "psalm"
+                ],
+                "phpcs": [
+                    "phpcs"
+                ],
+                "phpcbf": [
+                    "phpcbf"
+                ]
+            },
             "license": [
                 "ISC"
             ],
@@ -254,11 +263,7 @@
                 "php",
                 "server"
             ],
-            "support": {
-                "issues": "https://github.com/felixfbecker/php-language-server-protocol/issues",
-                "source": "https://github.com/felixfbecker/php-language-server-protocol/tree/1.5.1"
-            },
-            "time": "2021-02-22T14:02:09+00:00"
+            "time": "2022-02-10T05:17:51+00:00"
         },
         {
             "name": "jetbrains/phpstorm-stubs",
@@ -266,12 +271,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "b84793775b18b09eb13779e8fc29ff2419450e30"
+                "reference": "fdcbd49495f983fbe87fe803a32757941f3d65f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/b84793775b18b09eb13779e8fc29ff2419450e30",
-                "reference": "b84793775b18b09eb13779e8fc29ff2419450e30",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/fdcbd49495f983fbe87fe803a32757941f3d65f4",
+                "reference": "fdcbd49495f983fbe87fe803a32757941f3d65f4",
                 "shasum": ""
             },
             "require-dev": {
@@ -307,7 +312,7 @@
             "support": {
                 "source": "https://github.com/JetBrains/phpstorm-stubs/tree/master"
             },
-            "time": "2021-12-31T12:50:10+00:00"
+            "time": "2022-02-10T11:49:11+00:00"
         },
         {
             "name": "microsoft/tolerant-php-parser",
@@ -517,16 +522,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.5.1",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae"
+                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/a12f7e301eb7258bb68acd89d4aefa05c2906cae",
-                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/93ebd0014cab80c4ea9f5e297ea48672f1b87706",
+                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706",
                 "shasum": ""
             },
             "require": {
@@ -561,9 +566,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.1"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.0"
             },
-            "time": "2021-10-02T14:08:47+00:00"
+            "time": "2022-01-04T19:58:01+00:00"
         },
         {
             "name": "psr/log",
@@ -639,14 +644,14 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Sabre\\Event\\": "lib/"
-                },
                 "files": [
                     "lib/coroutine.php",
                     "lib/Loop/functions.php",
                     "lib/Promise/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Sabre\\Event\\": "lib/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -740,20 +745,23 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.23.0",
+            "version": "v1.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce"
+                "reference": "30885182c981ab175d4d034db0f6f469898070ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/46cd95797e9df938fdd2b03693b5fca5e64b01ce",
-                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/30885182c981ab175d4d034db0f6f469898070ab",
+                "reference": "30885182c981ab175d4d034db0f6f469898070ab",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
+            },
+            "provide": {
+                "ext-ctype": "*"
             },
             "suggest": {
                 "ext-ctype": "For best performance"
@@ -799,7 +807,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.23.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.24.0"
             },
             "funding": [
                 {
@@ -815,7 +823,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-19T12:13:01+00:00"
+            "time": "2021-10-20T20:35:02+00:00"
         },
         {
             "name": "webmozart/assert",

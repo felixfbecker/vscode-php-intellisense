@@ -10,6 +10,10 @@
         {
             "type": "git",
             "url": "https://github.com/zobo/php-language-server"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/zobo/php-language-server-protocol"
         }
     ],
     "require": {
