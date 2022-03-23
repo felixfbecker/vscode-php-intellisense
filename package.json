@@ -10,7 +10,7 @@
   "version": "1.0.5",
   "engines": {
     "vscode": "^1.63.2",
-    "node": "^16.13.1"
+    "node": "^16.13.2"
   },
   "keywords": [
     "php",
