@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec853e704b7c8812c606c78e3bcab626",
+    "content-hash": "edeb422e34a68eda14bf32425dcf25b8",
     "packages": [
         {
             "name": "composer/xdebug-handler",
@@ -143,7 +143,6 @@
                 "phpunit/phpunit": "^9.0",
                 "squizlabs/php_codesniffer": "^3.6"
             },
-            "default-branch": true,
             "bin": [
                 "bin/php-language-server.php"
             ],
@@ -271,12 +270,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "74630bcacf46d51aa90848397e92cf006fe81415"
+                "reference": "4d56c4fe76164d43096b2775b2510042adee34b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/74630bcacf46d51aa90848397e92cf006fe81415",
-                "reference": "74630bcacf46d51aa90848397e92cf006fe81415",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/4d56c4fe76164d43096b2775b2510042adee34b8",
+                "reference": "4d56c4fe76164d43096b2775b2510042adee34b8",
                 "shasum": ""
             },
             "require-dev": {
@@ -312,7 +311,7 @@
             "support": {
                 "source": "https://github.com/JetBrains/phpstorm-stubs/tree/master"
             },
-            "time": "2022-03-21T09:22:36+00:00"
+            "time": "2022-05-17T08:26:32+00:00"
         },
         {
             "name": "microsoft/tolerant-php-parser",
@@ -522,16 +521,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706"
+                "reference": "77a32518733312af16a44300404e945338981de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/93ebd0014cab80c4ea9f5e297ea48672f1b87706",
-                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/77a32518733312af16a44300404e945338981de3",
+                "reference": "77a32518733312af16a44300404e945338981de3",
                 "shasum": ""
             },
             "require": {
@@ -566,9 +565,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.0"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.1"
             },
-            "time": "2022-01-04T19:58:01+00:00"
+            "time": "2022-03-15T21:29:03+00:00"
         },
         {
             "name": "psr/log",
@@ -885,21 +884,14 @@
         },
         {
             "name": "webmozart/glob",
-            "version": "4.4.0",
+            "version": "dev-feat-skip-errors",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozarts/glob.git",
-                "reference": "539b5dbc10021d3f9242e7a9e9b6b37843179e83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/glob/zipball/539b5dbc10021d3f9242e7a9e9b6b37843179e83",
-                "reference": "539b5dbc10021d3f9242e7a9e9b6b37843179e83",
-                "shasum": ""
+                "url": "https://github.com/zobo/glob.git",
+                "reference": "b2faa074b95aaf1780bc30ac4c5e7ed7782391a9"
             },
             "require": {
-                "php": "^7.3 || ^8.0.0",
-                "webmozart/path-util": "^2.2"
+                "php": "^7.3 || ^8.0.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.5",
@@ -916,7 +908,11 @@
                     "Webmozart\\Glob\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Webmozart\\Glob\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -927,11 +923,7 @@
                 }
             ],
             "description": "A PHP implementation of Ant's glob.",
-            "support": {
-                "issues": "https://github.com/webmozarts/glob/issues",
-                "source": "https://github.com/webmozarts/glob/tree/4.4.0"
-            },
-            "time": "2021-10-07T16:13:08+00:00"
+            "time": "2022-05-17T20:19:01+00:00"
         },
         {
             "name": "webmozart/path-util",
@@ -992,11 +984,18 @@
             "version": "dev-main",
             "alias": "1.0.0",
             "alias_normalized": "1.0.0.0"
+        },
+        {
+            "package": "webmozart/glob",
+            "version": "dev-feat-skip-errors",
+            "alias": "4.6",
+            "alias_normalized": "4.6.0.0"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "felixfbecker/language-server": 20
+        "felixfbecker/language-server": 20,
+        "webmozart/glob": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -1005,5 +1004,5 @@
     "platform-overrides": {
         "php": "7.4.0"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
