@@ -121,7 +121,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "735b9283541c3cfb24b836fefd3cdd75975a44a2"
+                "reference": "4736a55783ebe69ff0ef5a2b907c56a79463a8d7"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
@@ -135,7 +135,7 @@
                 "psr/log": "^1.0",
                 "sabre/event": "^5.0",
                 "sabre/uri": "^2.0",
-                "webmozart/glob": "^4.4",
+                "webmozart/glob": "dev-feat-skip-errors as 4.6",
                 "webmozart/path-util": "^2.3"
             },
             "require-dev": {
@@ -201,7 +201,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2022-03-23T23:23:15+00:00"
+            "time": "2022-05-17T21:20:03+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
