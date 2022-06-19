@@ -14,15 +14,10 @@
         {
             "type": "git",
             "url": "https://github.com/zobo/php-language-server-protocol"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/zobo/glob.git"
         }
     ],
     "require": {
-        "felixfbecker/language-server": "dev-main as 1.0.0",
-        "webmozart/glob": "dev-feat-skip-errors as 4.6"
+        "felixfbecker/language-server": "dev-main as 1.0.0"
     },
     "scripts": {
         "parse-stubs": "LanguageServer\\ComposerScripts::parseStubs",
