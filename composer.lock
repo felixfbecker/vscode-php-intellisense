@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "edeb422e34a68eda14bf32425dcf25b8",
+    "content-hash": "ec853e704b7c8812c606c78e3bcab626",
     "packages": [
         {
             "name": "composer/xdebug-handler",
@@ -121,7 +121,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "8dc5ad63756a0351e305d4a021f9b4dba4144f26"
+                "reference": "e1f889d3760b699b93ad0de0b08b1865f2133a20"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
@@ -135,7 +135,7 @@
                 "psr/log": "^1.0",
                 "sabre/event": "^5.0",
                 "sabre/uri": "^2.0",
-                "webmozart/glob": "dev-feat-skip-errors as 4.6",
+                "webmozart/glob": "^4.6",
                 "webmozart/path-util": "^2.3"
             },
             "require-dev": {
@@ -143,7 +143,6 @@
                 "phpunit/phpunit": "^9.0",
                 "squizlabs/php_codesniffer": "^3.6"
             },
-            "default-branch": true,
             "bin": [
                 "bin/php-language-server.php"
             ],
@@ -202,7 +201,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2022-06-19T13:03:35+00:00"
+            "time": "2022-06-19T13:22:00+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
@@ -803,11 +802,17 @@
         },
         {
             "name": "webmozart/glob",
-            "version": "dev-feat-skip-errors",
+            "version": "4.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zobo/glob.git",
-                "reference": "0a42feddac28034a000ecbf78193ddfb8e68ee58"
+                "url": "https://github.com/webmozarts/glob.git",
+                "reference": "3c17f7dec3d9d0e87b575026011f2e75a56ed655"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozarts/glob/zipball/3c17f7dec3d9d0e87b575026011f2e75a56ed655",
+                "reference": "3c17f7dec3d9d0e87b575026011f2e75a56ed655",
+                "shasum": ""
             },
             "require": {
                 "php": "^7.3 || ^8.0.0"
@@ -827,11 +832,7 @@
                     "Webmozart\\Glob\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Webmozart\\Glob\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -842,7 +843,11 @@
                 }
             ],
             "description": "A PHP implementation of Ant's glob.",
-            "time": "2022-05-24T17:46:24+00:00"
+            "support": {
+                "issues": "https://github.com/webmozarts/glob/issues",
+                "source": "https://github.com/webmozarts/glob/tree/4.6.0"
+            },
+            "time": "2022-05-24T19:45:58+00:00"
         },
         {
             "name": "webmozart/path-util",
@@ -903,18 +908,11 @@
             "version": "dev-main",
             "alias": "1.0.0",
             "alias_normalized": "1.0.0.0"
-        },
-        {
-            "package": "webmozart/glob",
-            "version": "dev-feat-skip-errors",
-            "alias": "4.6",
-            "alias_normalized": "4.6.0.0"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "felixfbecker/language-server": 20,
-        "webmozart/glob": 20
+        "felixfbecker/language-server": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -923,5 +921,5 @@
     "platform-overrides": {
         "php": "7.4.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.1.0"
 }
