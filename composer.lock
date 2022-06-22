@@ -121,7 +121,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "e1f889d3760b699b93ad0de0b08b1865f2133a20"
+                "reference": "f5be94a6c5141576299ce79c1255ffacfc9d35e8"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
@@ -201,7 +201,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2022-06-19T13:22:00+00:00"
+            "time": "2022-06-22T11:45:45+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
@@ -270,12 +270,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "9717ec39b211f2cef82a59c29c9eef0954647fac"
+                "reference": "11e9959926d90dd21f1f36c22dc30dc09cfd7c5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/9717ec39b211f2cef82a59c29c9eef0954647fac",
-                "reference": "9717ec39b211f2cef82a59c29c9eef0954647fac",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/11e9959926d90dd21f1f36c22dc30dc09cfd7c5b",
+                "reference": "11e9959926d90dd21f1f36c22dc30dc09cfd7c5b",
                 "shasum": ""
             },
             "require-dev": {
@@ -311,7 +311,7 @@
             "support": {
                 "source": "https://github.com/JetBrains/phpstorm-stubs/tree/master"
             },
-            "time": "2022-06-10T12:48:12+00:00"
+            "time": "2022-06-21T10:12:53+00:00"
         },
         {
             "name": "microsoft/tolerant-php-parser",
