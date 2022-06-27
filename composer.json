@@ -14,10 +14,15 @@
         {
             "type": "git",
             "url": "https://github.com/zobo/php-language-server-protocol"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/microsoft/tolerant-php-parser.git"
         }
     ],
     "require": {
-        "felixfbecker/language-server": "dev-main as 1.0.0"
+        "felixfbecker/language-server": "dev-main as 1.0.0",
+        "microsoft/tolerant-php-parser": "dev-main as 0.1.2"
     },
     "scripts": {
         "parse-stubs": "LanguageServer\\ComposerScripts::parseStubs",
