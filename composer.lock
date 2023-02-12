@@ -121,7 +121,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "0efb96a85587405fe37ac2009d49710172772b86"
+                "reference": "e6b112968f60591a2034869a2eda76ba90c75327"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
@@ -202,7 +202,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2022-12-16T06:45:12+00:00"
+            "time": "2023-02-12T22:48:53+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
@@ -271,12 +271,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "d2a0e9f7f2ea57788270c5e997ea32486299e475"
+                "reference": "de53302780aee15d724360f2ee728946a4527659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/d2a0e9f7f2ea57788270c5e997ea32486299e475",
-                "reference": "d2a0e9f7f2ea57788270c5e997ea32486299e475",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/de53302780aee15d724360f2ee728946a4527659",
+                "reference": "de53302780aee15d724360f2ee728946a4527659",
                 "shasum": ""
             },
             "require-dev": {
@@ -284,7 +284,7 @@
                 "nikic/php-parser": "@stable",
                 "php": "^8.0",
                 "phpdocumentor/reflection-docblock": "@stable",
-                "phpunit/phpunit": "@stable"
+                "phpunit/phpunit": "^9.6"
             },
             "default-branch": true,
             "type": "library",
@@ -312,7 +312,7 @@
             "support": {
                 "source": "https://github.com/JetBrains/phpstorm-stubs/tree/master"
             },
-            "time": "2022-12-15T21:36:39+00:00"
+            "time": "2023-02-11T17:45:35+00:00"
         },
         {
             "name": "microsoft/tolerant-php-parser",
@@ -320,7 +320,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/microsoft/tolerant-php-parser.git",
-                "reference": "6bd3e3ba00994984d83c9e9153a0bf20da90bfcf"
+                "reference": "b443ec89137bb6069d7d239726727ab8369f0456"
             },
             "require": {
                 "php": ">=7.2"
@@ -338,6 +338,13 @@
                     ]
                 }
             },
+            "autoload-dev": {
+                "psr-4": {
+                    "Microsoft\\PhpParser\\Tests\\Unit\\": [
+                        "tests/unit/"
+                    ]
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -348,7 +355,7 @@
                 }
             ],
             "description": "Tolerant PHP-to-AST parser designed for IDE usage scenarios",
-            "time": "2022-11-21T22:14:04+00:00"
+            "time": "2023-01-08T22:13:52+00:00"
         },
         {
             "name": "netresearch/jsonmapper",

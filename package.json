@@ -134,6 +134,11 @@
           "default": "off",
           "description": "Traces the communication between VSCode and the intellisense language server.",
           "scope": "window"
+        },
+        "php.files.exclude": {
+          "type": "array",
+          "items": "string",
+          "description": "Configure glob patterns for excluding files and folders from initial indexing. Paths are relative to root folder."
         }
       }
     }
