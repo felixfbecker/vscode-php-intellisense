@@ -121,7 +121,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "e6b112968f60591a2034869a2eda76ba90c75327"
+                "reference": "eeae2f5bb7c51b8b87683c9cdaa30ee67eecf8fb"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
@@ -143,7 +143,6 @@
                 "phpunit/phpunit": "^9.0",
                 "squizlabs/php_codesniffer": "^3.6"
             },
-            "default-branch": true,
             "bin": [
                 "bin/php-language-server.php"
             ],
@@ -202,7 +201,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2023-02-12T22:48:53+00:00"
+            "time": "2023-02-20T14:11:14+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
@@ -271,12 +270,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "de53302780aee15d724360f2ee728946a4527659"
+                "reference": "735d07ca3a233c78040f77b02e68e2db3a64cd18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/de53302780aee15d724360f2ee728946a4527659",
-                "reference": "de53302780aee15d724360f2ee728946a4527659",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/735d07ca3a233c78040f77b02e68e2db3a64cd18",
+                "reference": "735d07ca3a233c78040f77b02e68e2db3a64cd18",
                 "shasum": ""
             },
             "require-dev": {
@@ -312,7 +311,7 @@
             "support": {
                 "source": "https://github.com/JetBrains/phpstorm-stubs/tree/master"
             },
-            "time": "2023-02-11T17:45:35+00:00"
+            "time": "2023-02-20T10:01:57+00:00"
         },
         {
             "name": "microsoft/tolerant-php-parser",
@@ -932,5 +931,5 @@
     "platform-overrides": {
         "php": "7.4.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.1.0"
 }
