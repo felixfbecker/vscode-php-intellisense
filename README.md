@@ -18,6 +18,10 @@ I recommend to disable VS Code's built-in PHP IntelliSense by setting `php.sugge
 
 ## Features
 
+### Ignore path on initial index
+
+Set `php.files.exclude` setting to not index glob patterns on startup. Example: `"php.files.exclude": [ "generated/**/*" ]`. Files are still indexed when opened in editor.
+
 ### Completion
 
 ![Completion search demo](images/completion.gif)
