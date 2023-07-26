@@ -168,7 +168,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "1f55e86e97f959d85808f17020794cb8d5829bfa"
+                "reference": "25eb2c947a2496b5367cfbb1a17a2edf9a19d6b0"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
@@ -191,6 +191,7 @@
                 "phpunit/phpunit": "^9.0",
                 "squizlabs/php_codesniffer": "^3.6"
             },
+            "default-branch": true,
             "bin": [
                 "bin/php-language-server.php"
             ],
@@ -249,7 +250,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2023-07-17T09:07:09+00:00"
+            "time": "2023-07-26T12:37:45+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
@@ -318,12 +319,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "ac879a1b675e381326d3f2a440b81af3c1a7a374"
+                "reference": "0b9854c8ba932966f3cb1469a2d18ab9249272b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/ac879a1b675e381326d3f2a440b81af3c1a7a374",
-                "reference": "ac879a1b675e381326d3f2a440b81af3c1a7a374",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/0b9854c8ba932966f3cb1469a2d18ab9249272b9",
+                "reference": "0b9854c8ba932966f3cb1469a2d18ab9249272b9",
                 "shasum": ""
             },
             "require-dev": {
@@ -359,7 +360,7 @@
             "support": {
                 "source": "https://github.com/JetBrains/phpstorm-stubs/tree/master"
             },
-            "time": "2023-07-16T13:57:52+00:00"
+            "time": "2023-07-20T19:40:08+00:00"
         },
         {
             "name": "microsoft/tolerant-php-parser",
@@ -625,16 +626,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.22.1",
+            "version": "1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0"
+                "reference": "a2b24135c35852b348894320d47b3902a94bc494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/65c39594fbd8c67abfc68bb323f86447bab79cc0",
-                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/a2b24135c35852b348894320d47b3902a94bc494",
+                "reference": "a2b24135c35852b348894320d47b3902a94bc494",
                 "shasum": ""
             },
             "require": {
@@ -666,9 +667,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.22.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.23.0"
             },
-            "time": "2023-06-29T20:46:06+00:00"
+            "time": "2023-07-23T22:17:56+00:00"
         },
         {
             "name": "psr/log",
@@ -1032,5 +1033,5 @@
     "platform-overrides": {
         "php": "7.4.0"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }

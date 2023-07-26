@@ -6,6 +6,8 @@ import * as semver from 'semver'
 import * as url from 'url'
 import * as vscode from 'vscode'
 import { LanguageClient, LanguageClientOptions, RevealOutputChannelOn, StreamInfo } from 'vscode-languageclient/node'
+import { EvaluatableExpressionRequest } from './protocol'
+
 const composerJson = require('../composer.json')
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
@@ -139,4 +141,26 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     // Push the disposable to the context's subscriptions so that the
     // client can be deactivated on extension deactivation
     context.subscriptions.push(disposable)
+
+    context.subscriptions.push(
+        vscode.languages.registerEvaluatableExpressionProvider('php', {
+            async provideEvaluatableExpression(
+                document: vscode.TextDocument,
+                position: vscode.Position,
+                token: vscode.CancellationToken
+            ): Promise<vscode.ProviderResult<vscode.EvaluatableExpression>> {
+                if (client.initializeResult?.capabilities.experimental.xevaluatableExpressionProvider) {
+                    const eer = await client.sendRequest(
+                        EvaluatableExpressionRequest.type,
+                        client.code2ProtocolConverter.asTextDocumentPositionParams(document, position),
+                        token
+                    )
+                    if (eer && eer.expression) {
+                        return new vscode.EvaluatableExpression(eer.range, eer.expression)
+                    }
+                }
+                return undefined
+            },
+        })
+    )
 }
