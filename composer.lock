@@ -168,14 +168,14 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server",
-                "reference": "25eb2c947a2496b5367cfbb1a17a2edf9a19d6b0"
+                "reference": "5f6f853c459c8aacddb42dc853aa69e74cc95400"
             },
             "require": {
                 "composer/xdebug-handler": "^1.0",
                 "felixfbecker/advanced-json-rpc": "^3.0.0",
                 "felixfbecker/language-server-protocol": "dev-main",
                 "jetbrains/phpstorm-stubs": "dev-master",
-                "microsoft/tolerant-php-parser": "^0.1.1",
+                "microsoft/tolerant-php-parser": "dev-main as 0.1.2",
                 "netresearch/jsonmapper": "^1.0",
                 "php": ">=7.4",
                 "phpdocumentor/reflection-docblock": "^5.2.2",
@@ -250,7 +250,7 @@
                 "studio",
                 "visual"
             ],
-            "time": "2023-07-26T12:37:45+00:00"
+            "time": "2023-07-28T13:38:56+00:00"
         },
         {
             "name": "felixfbecker/language-server-protocol",
@@ -258,7 +258,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zobo/php-language-server-protocol",
-                "reference": "249a11e92d061741de941fa3761f0df1a0c6f155"
+                "reference": "c36dfa3f72d608b0d04698f7196a6a6d9bd78cc6"
             },
             "require": {
                 "php": ">=7.1"
@@ -311,7 +311,7 @@
                 "php",
                 "server"
             ],
-            "time": "2022-06-19T12:45:07+00:00"
+            "time": "2023-07-28T07:50:02+00:00"
         },
         {
             "name": "jetbrains/phpstorm-stubs",

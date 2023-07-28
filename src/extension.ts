@@ -10,6 +10,8 @@ import { EvaluatableExpressionRequest } from './protocol'
 
 const composerJson = require('../composer.json')
 
+let client: LanguageClient
+
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
     const conf = vscode.workspace.getConfiguration('php')
     const executablePath =
@@ -67,8 +69,6 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
         )
         return
     }
-
-    let client: LanguageClient
 
     const serverOptions = () =>
         new Promise<ChildProcess | StreamInfo>((resolve, reject) => {
@@ -136,11 +136,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 
     // Create the language client and start the client.
     client = new LanguageClient('php-intellisense', 'PHP Language Server', serverOptions, clientOptions)
-    const disposable = client.start()
-
-    // Push the disposable to the context's subscriptions so that the
-    // client can be deactivated on extension deactivation
-    context.subscriptions.push(disposable)
+    client.start()
 
     context.subscriptions.push(
         vscode.languages.registerEvaluatableExpressionProvider('php', {
@@ -163,4 +159,11 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
             },
         })
     )
+}
+
+export function deactivate(): Thenable<void> | undefined {
+    if (!client) {
+        return undefined
+    }
+    return client.stop()
 }
